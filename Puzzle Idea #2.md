@@ -78,3 +78,12 @@ There are 3 pieces of wooden boards in the Past.
 * grass
 * sidewalks
 
+## Pictures
+
+#### Proof of Concept of this Puzzle
+![](img/puzzle2_1.jpg)
+
+#### The Future should look like this
+![](img/puzzle2_2.png)
+
+
