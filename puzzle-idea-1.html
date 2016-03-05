@@ -2,149 +2,83 @@
 
 <head>
 <meta charset="utf-8">
-<title>puzzle-idea-2</title>
+<title>puzzle-idea-1</title>
 <link href="css/github2.css" rel="stylesheet">
 </head>
 <body>
-<h1 id="toc_0">Puzzle Idea #2</h1>
+<h1 id="toc_0">Puzzle Idea #1</h1>
 
 <h2 id="toc_1">Introduction</h2>
 
-<p>In the Past player is in front of a brook, while in the Future player is in front of a two-way road with trees between the two directions.</p>
+<p>In the Past player is in front of a huge gate/rock, while in the Future player is in front of an area guarded by some sort of security device, which scans the area to detect intruders.</p>
 
-<p>The brook is generally very wide, but as one spot it is narrow. This spot can be reached by walking on the left lane of the Future.</p>
+<p>The huge gate/rock can be opened by pull a lever at a spot not far yet not too close to the gate/rock. Then it will start to close again slowly.</p>
 
-<p>The player needs to find something to put over the brook to go across.</p>
-
-<p>There are 3 pieces of wooden boards in the Past.</p>
-
-<ul>
-<li>Board 1 is very long, enough to be put on anywhere along the brook to go across it. However, the location of Board 1 is not reachable in the Future.</li>
-<li>Board 2 is close to the brook, but is not long enough even for the narrow part of the brook.</li>
-<li>Board 3 is reachable through the right lane of the road in the Future, but is not long enough to go across the river there. It is long enough to be put on the left part of the brook.</li>
-</ul>
+<p>It is not difficult for the player in the Future to pass this area without being detected by the security device if the player in the Past is not blocked by the huge gate/rock.</p>
 
 <h2 id="toc_2">Objects in the Past</h2>
 
-<h3 id="toc_3">Brook</h3>
+<h3 id="toc_3">Huge Gate/rock</h3>
 
 <ul>
-<li>description: a brook that is almost straight, almost with the same width all along, except at the <code>narrow spot</code></li>
-<li>children objects: <code>narrow spot</code>, <code>right part</code> </li>
-</ul>
-
-<h4 id="toc_4">narrow spot</h4>
-
-<ul>
-<li>description: a narrow spot at the brook, a good place to put a wooden board at</li>
-<li>location: corresponding to <code>left lane</code> of <code>Two-way Road</code></li>
-</ul>
-
-<h4 id="toc_5">right part</h4>
-
-<ul>
-<li>description: just a normal segment of the brook</li>
-<li>location: corresponding to <code>right lane</code> of <code>Two-way Road</code></li>
-</ul>
-
-<h3 id="toc_6">Board1</h3>
-
-<ul>
-<li>length: long, enough to be put over the brook</li>
-<li>location: relatively far from the river, not reachable in the Future</li>
-<li>attributes:
-
-<ul>
-<li>pickable </li>
-</ul></li>
-</ul>
-
-<h3 id="toc_7">Board2</h3>
-
-<ul>
-<li>length: short, not long enough to be put over the narrow spot of the brook</li>
-<li>location: close to <code>narrow spot</code>, corresponding to somewhere in the <code>left lane</code> of <code>Two-way Road</code></li>
-<li>attributes:
-
-<ul>
-<li>pickable</li>
-</ul></li>
+<li>description: a huge gate/rock that is in the player&#39;s way, canbe opend by pullling <code>Lever</code></li>
 <li>scripting:
 
 <ul>
-<li>when put at <code>narrow spot</code>: generates <em>Warning</em> dialog <strong>OR</strong> just floats away on the brook</li>
-<li>when put at <code>right part</code>: generates <em>Warning</em> dialog <strong>OR</strong> just floats away on the brook</li>
+<li>when <code>Lever</code> is pulled: firstly opens, then closes slowly</li>
 </ul></li>
 </ul>
 
-<h3 id="toc_8">Board3</h3>
+<h3 id="toc_4">Lever</h3>
 
 <ul>
-<li>length: medium, long enough to be put over the narrow spot of the brook</li>
-<li>location: corresponding to somewhere in the <code>right lane</code> of <code>Two-way Road</code></li>
+<li>description: a lever that opens <code>Huge Gate/rock</code></li>
 <li>attributes:
 
 <ul>
-<li>pickable</li>
-</ul></li>
-<li>scripting:
-
-<ul>
-<li>when put at <code>narrow spot</code>: generates <em>Notification</em> dialog <strong>AND/OR</strong> just stays over the brook</li>
-<li>when put at <code>right part</code>: generates <em>Warning</em> dialog <strong>AND/OR</strong> just floats away on the brook</li>
+<li>interactable</li>
 </ul></li>
 </ul>
 
-<h3 id="toc_9">Environmental Objects</h3>
+<h3 id="toc_5">Environmental Objects</h3>
 
 <ul>
+<li>mountains</li>
 <li>trees</li>
 <li>flowers</li>
 <li>grass</li>
 <li>paths</li>
 </ul>
 
-<h2 id="toc_10">Objects in the Future</h2>
+<h2 id="toc_6">Objects in the Future</h2>
 
-<h3 id="toc_11">Two-way Road</h3>
+<h3 id="toc_7">Security Device</h3>
 
 <ul>
-<li>description: a two-way road with trees in between two directions</li>
-<li>children objects: <code>left lane</code>, <code>right lane</code></li>
+<li>description: a device that is monitoring the area by scanning for intruders</li>
+<li>scripting:
+
+<ul>
+<li>always: scanning the room for intruders</li>
+<li>when detecting player: generates <em>Losing</em> dialog <strong>AND/OR</strong> kill player</li>
+</ul></li>
 </ul>
 
-<h4 id="toc_12">left lane</h4>
+<h3 id="toc_8">Environmental Objects</h3>
+
+<h4 id="toc_9">if outside</h4>
 
 <ul>
-<li>description: </li>
-<li>location: corresponding to <code>narrow spot</code> of <code>Brook</code> and <code>Board2</code></li>
-</ul>
-
-<h4 id="toc_13">right lane</h4>
-
-<ul>
-<li>description:</li>
-<li>location: corresponding to <code>right part</code> of <code>Brook</code> and <code>Board3</code></li>
-</ul>
-
-<h3 id="toc_14">Environmental Objects</h3>
-
-<ul>
-<li>trees</li>
-<li>flowers</li>
-<li>grass</li>
+<li>streets</li>
 <li>sidewalks</li>
+<li>buildings/walls</li>
 </ul>
 
-<h2 id="toc_15">Pictures</h2>
+<h4 id="toc_10">if inside</h4>
 
-<h4 id="toc_16">Proof of Concept of this Puzzle</h4>
-
-<p><img src="img/puzzle2_1.jpg" alt=""></p>
-
-<h4 id="toc_17">The Future should look like this</h4>
-
-<p><img src="img/puzzle2_2.png" alt=""></p>
+<ul>
+<li>corridor/room</li>
+</ul>
 
 <script type="text/javascript">
 var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(?!\*)(\w+)\b/i,t=_self.Prism={util:{encode:function(e){return e instanceof n?new n(e.type,t.util.encode(e.content),e.alias):"Array"===t.util.type(e)?e.map(t.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},clone:function(e){var n=t.util.type(e);switch(n){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=t.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return t.util.clone(e)})}return e}},languages:{extend:function(e,n){var a=t.util.clone(t.languages[e]);for(var r in n)a[r]=n[r];return a},insertBefore:function(e,n,a,r){r=r||t.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==n)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return t.languages.DFS(t.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,n,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(n.call(e,l,e[l],a||l),"Object"!==t.util.type(e[l])||r[e[l]]?"Array"!==t.util.type(e[l])||r[e[l]]||(r[e[l]]=!0,t.languages.DFS(e[l],n,l,r)):(r[e[l]]=!0,t.languages.DFS(e[l],n,null,r)))}},plugins:{},highlightAll:function(e,n){for(var a,r=document.querySelectorAll('code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'),l=0;a=r[l++];)t.highlightElement(a,e===!0,n)},highlightElement:function(n,a,r){for(var l,i,o=n;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=t.languages[l]),n.className=n.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=n.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=n.textContent,u={element:n,language:l,grammar:i,code:s};if(!s||!i)return t.hooks.run("complete",u),void 0;if(t.hooks.run("before-highlight",u),a&&_self.Worker){var g=new Worker(t.filename);g.onmessage=function(e){u.highlightedCode=e.data,t.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),t.hooks.run("after-highlight",u),t.hooks.run("complete",u)},g.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=t.highlight(u.code,u.grammar,u.language),t.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(n),t.hooks.run("after-highlight",u),t.hooks.run("complete",u)},highlight:function(e,a,r){var l=t.tokenize(e,a);return n.stringify(t.util.encode(l),r)},tokenize:function(e,n){var a=t.Token,r=[e],l=n.rest;if(l){for(var i in l)n[i]=l[i];delete n.rest}e:for(var i in n)if(n.hasOwnProperty(i)&&n[i]){var o=n[i];o="Array"===t.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],g=u.inside,c=!!u.lookbehind,f=0,h=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var d=r[p];if(r.length>e.length)break e;if(!(d instanceof a)){u.lastIndex=0;var m=u.exec(d);if(m){c&&(f=m[1].length);var y=m.index-1+f,m=m[0].slice(f),v=m.length,k=y+v,b=d.slice(0,y+1),w=d.slice(k+1),P=[p,1];b&&P.push(b);var A=new a(i,g?t.tokenize(m,g):m,h);P.push(A),w&&P.push(w),Array.prototype.splice.apply(r,P)}}}}}return r},hooks:{all:{},add:function(e,n){var a=t.hooks.all;a[e]=a[e]||[],a[e].push(n)},run:function(e,n){var a=t.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(n)}}},n=t.Token=function(e,t,n){this.type=e,this.content=t,this.alias=n};if(n.stringify=function(e,a,r){if("string"==typeof e)return e;if("Array"===t.util.type(e))return e.map(function(t){return n.stringify(t,a,e)}).join("");var l={type:e.type,content:n.stringify(e.content,a,r),tag:"span",classes:["token",e.type],attributes:{},language:a,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===t.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}t.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var n=JSON.parse(e.data),a=n.language,r=n.code,l=n.immediateClose;_self.postMessage(t.highlight(r,t.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var a=document.getElementsByTagName("script");return a=a[a.length-1],a&&(t.filename=a.src,document.addEventListener&&!a.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",t.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
