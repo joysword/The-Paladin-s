@@ -78,25 +78,25 @@ public class getRealCameraUpdaterFuture
         {
             Rect viewport = new Rect(0f, 0f, 1f, 1f);
 
-            switch(viewportType) {
-            case ViewportType.Automatic:
-                getReal3D.Plugin.getCameraViewport((uint) cameraIndex, ref viewport);
-                break;
-            case ViewportType.UserModulated:
-                getReal3D.Plugin.getCameraViewport((uint) cameraIndex, ref viewport);
-                viewport.Set(userViewport.x * viewport.width + viewport.x, userViewport.y * viewport.height + viewport.y,
-                              userViewport.width * viewport.width, userViewport.height * viewport.height);
-                break;
-            case ViewportType.UserOverride:
-                viewport = userViewport;
-                break;
+            switch (viewportType) {
+                case ViewportType.Automatic:
+                    getReal3D.Plugin.getCameraViewport((uint) cameraIndex, ref viewport);
+                    break;
+                case ViewportType.UserModulated:
+                    getReal3D.Plugin.getCameraViewport((uint) cameraIndex, ref viewport);
+                    viewport.Set(userViewport.x * viewport.width + viewport.x, userViewport.y * viewport.height + viewport.y,
+                                  userViewport.width * viewport.width, userViewport.height * viewport.height);
+                    break;
+                case ViewportType.UserOverride:
+                    viewport = userViewport;
+                    break;
             }
 
             GetComponent<Camera>().rect = viewport;
 
             GetComponent<Camera>().renderingPath = getReal3D.Config.renderingPath;
 
-            if(getReal3D.Plugin.getCameraUseRTT((uint) cameraIndex)) {
+            if (getReal3D.Plugin.getCameraUseRTT((uint) cameraIndex)) {
                 ensureRenderToTexture();
             }
         }

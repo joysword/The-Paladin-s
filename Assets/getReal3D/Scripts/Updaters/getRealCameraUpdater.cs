@@ -48,15 +48,12 @@ public class getRealCameraUpdater
     {
         computerName = System.Environment.MachineName;
 
-        if(computerName.Contains("LYRA"))
-        {
+        if (computerName.Contains("LYRA")) {
             string nodeIDString = computerName.Replace("LYRA-", "");
-            
             nodeID = System.Convert.ToInt32(nodeIDString);
         }
 
-        if(nodeID > 18)
-        {
+        if (nodeID > 18) {
             GetComponent<Camera>().gameObject.SetActive(false);
         }
 
@@ -75,29 +72,28 @@ public class getRealCameraUpdater
             CreateCameras();
         }
 
-        if (nodeID <= 18)
-        {
+        if (nodeID <= 18) {
             Rect viewport = new Rect(0f, 0f, 1f, 1f);
 
-            switch(viewportType) {
-            case ViewportType.Automatic:
-                getReal3D.Plugin.getCameraViewport((uint) cameraIndex, ref viewport);
-                break;
-            case ViewportType.UserModulated:
-                getReal3D.Plugin.getCameraViewport((uint) cameraIndex, ref viewport);
-                viewport.Set(userViewport.x * viewport.width + viewport.x, userViewport.y * viewport.height + viewport.y,
-                              userViewport.width * viewport.width, userViewport.height * viewport.height);
-                break;
-            case ViewportType.UserOverride:
-                viewport = userViewport;
-                break;
+            switch (viewportType) {
+                case ViewportType.Automatic:
+                    getReal3D.Plugin.getCameraViewport((uint) cameraIndex, ref viewport);
+                    break;
+                case ViewportType.UserModulated:
+                    getReal3D.Plugin.getCameraViewport((uint) cameraIndex, ref viewport);
+                    viewport.Set(userViewport.x * viewport.width + viewport.x, userViewport.y * viewport.height + viewport.y,
+                                  userViewport.width * viewport.width, userViewport.height * viewport.height);
+                    break;
+                case ViewportType.UserOverride:
+                    viewport = userViewport;
+                    break;
             }
 
             GetComponent<Camera>().rect = viewport;
 
             GetComponent<Camera>().renderingPath = getReal3D.Config.renderingPath;
 
-            if(getReal3D.Plugin.getCameraUseRTT((uint) cameraIndex)) {
+            if (getReal3D.Plugin.getCameraUseRTT((uint) cameraIndex)) {
                 ensureRenderToTexture();
             }
         }
@@ -105,30 +101,29 @@ public class getRealCameraUpdater
 
     void CreateCameras()
     {
-        if (nodeID <= 18)
-        {
+        if (nodeID <= 18) {
             List<int> needCameras = new List<int>();
-            for(int i = 1; i < getReal3D.Input.cameras.Count; ++i) needCameras.Add(i);
+            for (int i = 1; i < getReal3D.Input.cameras.Count; ++i) needCameras.Add(i);
 
             // find cameras, see which we can remove from needCameras
-            foreach(Camera cam in Camera.allCameras) {
-                if(cam.GetComponent<getRealCameraUpdater>() != null && (cam.name == name || cam.name == name + "(Clone)")) {
+            foreach (Camera cam in Camera.allCameras) {
+                if (cam.GetComponent<getRealCameraUpdater>() != null && (cam.name == name || cam.name == name + "(Clone)")) {
                     int idx = cam.GetComponent<getRealCameraUpdater>().cameraIndex;
-                    if(idx > 0) needCameras.Remove(idx);
+                    if (idx > 0) needCameras.Remove(idx);
                 }
             }
 
             // make missing cameras
-            foreach(int idx in needCameras) {
+            foreach (int idx in needCameras) {
                 GameObject newCamObject = null;
-                if(CameraPrefab == null) {
+                if (CameraPrefab == null) {
                     newCamObject = Instantiate(gameObject) as GameObject;
                 }
                 else {
                     newCamObject = Instantiate(CameraPrefab) as GameObject;
                 }
 
-                foreach(AudioListener listener in newCamObject.GetComponents<AudioListener>()) {
+                foreach (AudioListener listener in newCamObject.GetComponents<AudioListener>()) {
                     Destroy(listener);
                 }
 
@@ -137,7 +132,7 @@ public class getRealCameraUpdater
                 newCamObject.layer = gameObject.layer;
 
                 getRealCameraUpdater camUpdater = newCamObject.GetComponent<getRealCameraUpdater>();
-                if(camUpdater == null) camUpdater = newCamObject.AddComponent<getRealCameraUpdater>();
+                if (camUpdater == null) camUpdater = newCamObject.AddComponent<getRealCameraUpdater>();
                 camUpdater.cameraIndex = idx;
 
                 newCamObject.GetComponent<Camera>().CopyFrom(GetComponent<Camera>());
