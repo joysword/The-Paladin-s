@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &123640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 461560}
+  - 114: {fileID: 11451470}
+  - 114: {fileID: 11453274}
+  - 114: {fileID: 11496956}
+  m_Layer: 0
+  m_Name: CAVE2-Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &461560
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123640}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.491941512, y: 8.45944775e-17, z: -3.92267036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11451470
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a34fe77f5ff1b54a98ff1b3e2a74179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectToServer: 0
+  serverIP: 127.0.0.1
+  serverMsgPort: 28000
+  dataPort: 7013
+  debug: 0
+  mouseTouchEmulation: 0
+--- !u!114 &11453274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10990874bef88d94483990070f7b235d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  simulatorMode: 1
+  Head1: 0
+  Wand1: 1
+  Wand1Mocap: 1
+  Head2: 4
+  Wand2: 2
+  Wand2Mocap: 2
+  axisSensitivity: 1
+  axisDeadzone: .200000003
+  wand1TrackingOffset: {x: -.0280000009, y: -.0495946407, z: -.0736875236}
+  keyboardEventEmulation: 0
+  wandMousePointerEmulation: 0
+  mocapEmulation: 0
+  lockWandToHeadTransform: 0
+  mouseHeadLook: 0
+  headEmulatedPosition: {x: 0, y: 1.5, z: 0}
+  headEmulatedRotation: {x: 0, y: 0, z: 0}
+  wandEmulatedPosition: {x: .100000001, y: 1.42999995, z: .400000006}
+  wandEmulatedRotation: {x: 0, y: 0, z: 0}
+  defaultWandEmulationMode: 0
+  toggleWandEmulationMode: 3
+  wandEmulationMode: 0
+  toggleWandModeKey: 9
+  wandModeToggled: 0
+  mouseDeltaPos: {x: 0, y: 0, z: 0}
+  IJKLkeys: 2
+  IJKLkeyMode: 0
+  emulatedTranslateSpeed: .00499999989
+  emulatedRotationSpeed: .200000003
+  framerateCap: 60
+  cameraController: {fileID: 0}
+  wandSimulatorAnalogUD: Vertical
+  wandSimulatorAnalogLR: Horizontal
+  wandSimulatorButton3: Fire1
+  wandSimulatorButton2: Fire2
+  wandSimulatorDPadUp: 273
+  wandSimulatorDPadDown: 274
+  wandSimulatorDPadLeft: 276
+  wandSimulatorDPadRight: 275
+  wandSimulatorButton5: 32
+  wandSimulatorButton6: Fire3
+  wandSimulatorButton7: 304
+  lookHorizontal: 0
+  lookVertical: 0
+--- !u!114 &11496956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 123640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2133cfaacaabbf444b83846bb36c7690, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWindow: 0
+  appMenu: {fileID: 0}
+  showGUI: 0
+  showFPS: 0
+  showOnlyOnMaster: 0
+  FPS_updateInterval: .5
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 123640}
+  m_IsPrefabParent: 1
