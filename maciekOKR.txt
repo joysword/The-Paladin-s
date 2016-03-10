@@ -1,0 +1,7 @@
+Schedule and deliverable:
+
+map test prefab -- wednesday 12pm (estimateL 2hr)
+map primer and helper functions for map -- Thur by 9pm (estimate: 4hrs)
+some objects for the map (tree, stone etc.) -- Thur by 9pm (estimate: 1hr)
+
+REMEMBER TO PUT 3 BILBOARDS AND 3 LIGHT SOURCES

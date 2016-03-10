@@ -1,0 +1,4 @@
+Implement a test scene for Split screen - Sunday 9pm estimate 3 hours)
+Test in CAVE2 - Tuesday 9am (estimate 2 hours)
+Implement user input for wand - Wednesday 9pm (estimate 5 hours)
+Implement game logic for puzzle #1 - Thursday 9pm (estimate 5 hours)
