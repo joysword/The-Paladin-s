@@ -42,7 +42,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   connectToServer: 0
-  serverIP: 127.0.0.1
+  serverIP: 3132372e302e302e31
   serverMsgPort: 28000
   dataPort: 7013
   debug: 0
@@ -89,16 +89,16 @@ MonoBehaviour:
   emulatedRotationSpeed: .200000003
   framerateCap: 60
   cameraController: {fileID: 0}
-  wandSimulatorAnalogUD: Vertical
-  wandSimulatorAnalogLR: Horizontal
-  wandSimulatorButton3: Fire1
-  wandSimulatorButton2: Fire2
+  wandSimulatorAnalogUD: 566572746963616c
+  wandSimulatorAnalogLR: 486f72697a6f6e74616c
+  wandSimulatorButton3: 4669726531
+  wandSimulatorButton2: 4669726532
   wandSimulatorDPadUp: 273
   wandSimulatorDPadDown: 274
   wandSimulatorDPadLeft: 276
   wandSimulatorDPadRight: 275
   wandSimulatorButton5: 32
-  wandSimulatorButton6: Fire3
+  wandSimulatorButton6: 4669726533
   wandSimulatorButton7: 304
   lookHorizontal: 0
   lookVertical: 0

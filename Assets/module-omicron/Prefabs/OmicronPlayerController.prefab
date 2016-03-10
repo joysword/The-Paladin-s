@@ -1621,9 +1621,7 @@ MonoBehaviour:
   wandID: 1
   virtualWand: {fileID: 0}
   grabButton: 1
-  wandLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  wandLayerMask: {}
   wandHit: 0
   overGrabbable: 0
 --- !u!114 &11414970
@@ -1711,9 +1709,7 @@ MonoBehaviour:
   wandID: 1
   virtualWand: {fileID: 0}
   grabButton: 1
-  wandLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  wandLayerMask: {}
   wandHit: 0
   overGrabbable: 0
 --- !u!114 &11450144
@@ -1745,7 +1741,6 @@ MonoBehaviour:
   enableSpeechRecognition: 1
   minimumSpeechConfidence: .300000012
   voiceCommandListeners: []
-  debugText: {fileID: 0}
 --- !u!114 &11487264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1761,14 +1756,15 @@ MonoBehaviour:
   virtualWand: {fileID: 0}
   laserActivated: 0
   laserMaterial: {fileID: 2100000, guid: ada304220721b524192b496c8ad03bdb, type: 2}
-  laserColor: {r: 1, g: 0, b: 0, a: 1}
+  laserColor:
+    r: 1
+    g: 0
+    b: 0
+    a: 1
   laserParticlePrefab: {fileID: 19800000, guid: beaf932c310e7374eb76d21a775ef7e8,
     type: 2}
   drawLaser: 1
-  alwaysShowLaserParticle: 0
-  wandLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  wandLayerMask: {}
   laserButton: 2
 --- !u!114 &11495642
 MonoBehaviour:

@@ -80,9 +80,11 @@ MonoBehaviour:
   enableBodyTracking: 1
   enableSpeechRecognition: 1
   minimumSpeechConfidence: .300000012
+  omicronPlayerController: {fileID: 0}
+  sensorPosition: {x: 0, y: 0, z: 0}
+  sensorRotation: {x: 0, y: 0, z: 0}
   voiceCommandListeners:
   - {fileID: 0}
-  debugText: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

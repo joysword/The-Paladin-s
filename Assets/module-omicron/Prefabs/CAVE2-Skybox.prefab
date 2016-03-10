@@ -890,9 +890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a850a69262e317b4c9ad1ed21c5d1937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skyboxCullingMask:
-    serializedVersion: 2
-    m_Bits: 851724551
+  skyboxCullingMask: {}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

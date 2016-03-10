@@ -1013,7 +1013,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wandID: 1
-  virtualWand: {fileID: 0}
   litMaterial: {fileID: 2100000, guid: 9dd1f6c394cbe6c499f1e1767800dad8, type: 2}
   unlitMaterial: {fileID: 2100000, guid: 1f49b4702d92d24498264d14be07f555, type: 2}
   buttonCross: {fileID: 116750}
@@ -1035,7 +1034,6 @@ MonoBehaviour:
   L2: 0
   L3: 0
   leftAnalogStick: {x: 0, y: 0}
-  analogTriggers: {x: 0, y: 0}
   buttonTriangle: {fileID: 144910}
   buttonSquare: {fileID: 182276}
   buttonR1: {fileID: 107546}
