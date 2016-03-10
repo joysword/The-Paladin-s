@@ -6,7 +6,7 @@ public class TreeScript : MonoBehaviour {
     GameObject cam;
 	// Use this for initialization
 	void Start () {
-        cam = GameObject.Find("Camera");
+        cam = GameObject.FindGameObjectWithTag("RealCameraPast");
         foreach (Transform c in transform)
         {
             c.localScale = c.localScale * 2;
@@ -18,6 +18,7 @@ public class TreeScript : MonoBehaviour {
     {
         foreach (Transform c in transform)
         {
+
             c.LookAt(c.transform.position + cam.transform.rotation * Vector3.back,
                 cam.transform.rotation * Vector3.up);
         }
