@@ -344,6 +344,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da983aa5655d2a04888d17dc6a3c4b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &199986101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 199986102}
+  m_Layer: 0
+  m_Name: NavTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &199986102
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 199986101}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: 0, y: 1000, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2138942340}
+  m_RootOrder: 0
 --- !u!1 &218496171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,7 +1147,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2138942340}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &1263369081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1290,7 +1317,7 @@ Transform:
   m_Children:
   - {fileID: 2138942346}
   m_Father: {fileID: 2138942340}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1486025610 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: 2d29e93ddd193464f88a138770cf77bc, type: 3}
@@ -1492,7 +1519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1681457760
 Transform:
   m_ObjectHideFlags: 0
@@ -1720,8 +1747,8 @@ MonoBehaviour:
   navSpeedButton: NavSpeed
   resetButton: Reset
   jumpButton: Jump
-  navFollows: 0
-  navReference: {fileID: 0}
+  navFollows: 2
+  navReference: {fileID: 199986102}
 --- !u!114 &2118043790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1806,6 +1833,7 @@ Transform:
   m_LocalPosition: {x: 4, y: 1, z: 5.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 199986102}
   - {fileID: 2138942351}
   - {fileID: 1263369080}
   - {fileID: 1484091371}
@@ -1969,7 +1997,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2138942340}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &2138942352
 MonoBehaviour:
   m_ObjectHideFlags: 0
