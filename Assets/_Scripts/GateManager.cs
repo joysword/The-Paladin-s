@@ -3,6 +3,8 @@ using System.Collections;
 
 public class GateManager : MonoBehaviour {
 
+	public LeverManager lever;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -23,5 +25,6 @@ public class GateManager : MonoBehaviour {
             this.gameObject.transform.Translate(0, 0, -0.2f);
             yield return new WaitForSeconds(0.1f);
         }
+		lever.Reset();
     }
 }
