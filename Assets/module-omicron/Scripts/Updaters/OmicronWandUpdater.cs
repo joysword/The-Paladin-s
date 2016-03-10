@@ -130,4 +130,18 @@ void Update() {
             cave2Manager.wandEmulatedRotation = transform.eulerAngles;
         }
     }
+
+public Quaternion getRotationForPast() {
+        Quaternion rotation = transform.localRotation * Quaternion.Euler(0, 90, 0);
+        return rotation;
+    }
+
+public Quaternion getRotationForFuture() {
+        Quaternion rotation = transform.localRotation * Quaternion.Euler(0, -90, 0);
+        return rotation;
+    }
+
+public Quaternion getRotation() {
+        return transform.localRotation;
+    }
 }
