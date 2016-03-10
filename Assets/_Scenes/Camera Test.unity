@@ -230,8 +230,8 @@ MonoBehaviour:
   navSpeedButton: NavSpeed
   resetButton: Reset
   jumpButton: Jump
-  navFollows: 0
-  navReference: {fileID: 0}
+  navFollows: 2
+  navReference: {fileID: 396148176}
 --- !u!114 &91717501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,7 +421,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: a0cea1af54727cf4bb2cdbfb3bd4db84, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400018, guid: a0cea1af54727cf4bb2cdbfb3bd4db84, type: 3}
       propertyPath: m_LocalScale.y
@@ -470,6 +470,33 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a0cea1af54727cf4bb2cdbfb3bd4db84, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &396148175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 396148176}
+  m_Layer: 0
+  m_Name: NavTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &396148176
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396148175}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.49011612e-07}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 808870151}
+  m_RootOrder: 3
 --- !u!1 &407627243
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +758,7 @@ Transform:
   - {fileID: 808870155}
   - {fileID: 218496172}
   - {fileID: 766749866}
+  - {fileID: 396148176}
   m_Father: {fileID: 2034938252}
   m_RootOrder: 1
 --- !u!1 &808870152
@@ -1072,6 +1100,26 @@ Prefab:
       propertyPath: debug
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11453274, guid: 66bdb3ede759ef540b99a60a590d29e8, type: 2}
+      propertyPath: wandSimulatorAnalogUD
+      value: Vertical
+      objectReference: {fileID: 0}
+    - target: {fileID: 11453274, guid: 66bdb3ede759ef540b99a60a590d29e8, type: 2}
+      propertyPath: wandSimulatorAnalogLR
+      value: Horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 11453274, guid: 66bdb3ede759ef540b99a60a590d29e8, type: 2}
+      propertyPath: wandSimulatorButton3
+      value: Fire1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11453274, guid: 66bdb3ede759ef540b99a60a590d29e8, type: 2}
+      propertyPath: wandSimulatorButton2
+      value: Fire2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11453274, guid: 66bdb3ede759ef540b99a60a590d29e8, type: 2}
+      propertyPath: wandSimulatorButton6
+      value: Fire3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66bdb3ede759ef540b99a60a590d29e8, type: 2}
   m_IsPrefabParent: 0
@@ -1155,7 +1203,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2d29e93ddd193464f88a138770cf77bc, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2d29e93ddd193464f88a138770cf77bc, type: 3}
       propertyPath: m_LocalScale.x
@@ -1211,7 +1259,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1581941429}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 766f8c38e659465468545de77f006a60, type: 3}
   m_Name: 
@@ -1304,7 +1352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1681457760
 Transform:
   m_ObjectHideFlags: 0
@@ -1839,7 +1887,6 @@ GameObject:
   - 4: {fileID: 2138942351}
   - 114: {fileID: 2138942352}
   - 114: {fileID: 2138942344}
-  - 114: {fileID: 2138942345}
   m_Layer: 29
   m_Name: Hand
   m_TagString: Untagged
@@ -1859,19 +1906,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wandID: 2
-  virtualWand: {fileID: 0}
---- !u!114 &2138942345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2138942343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 115392b8257fdcb4a8678b4a85a459db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wandID: 1
   virtualWand: {fileID: 0}
 --- !u!4 &2138942346
 Transform:
