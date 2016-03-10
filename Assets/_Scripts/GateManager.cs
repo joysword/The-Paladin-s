@@ -14,13 +14,13 @@ public class GateManager : MonoBehaviour {
 	}
 
     public void Open() {
-        this.gameObject.transform.Translate(0, 12, 0);
+        this.gameObject.transform.Translate(0, 0, 12);
         StartCoroutine("Close");
     }
 
     IEnumerator Close() {
         for (float f = 12f; f >= 0; f-= 0.2f) {
-            this.gameObject.transform.Translate(0, -0.2f, 0);
+            this.gameObject.transform.Translate(0, 0, -0.2f);
             yield return new WaitForSeconds(0.1f);
         }
     }
