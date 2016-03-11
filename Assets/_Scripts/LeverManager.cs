@@ -31,16 +31,16 @@ public class LeverManager : MonoBehaviour {
 	}
 
 	public void OpenGate() {
-		gatePast.transform.Translate(0, 0, 12);
-		gateFuture.transform.Translate (0,0,12);
+		gatePast.transform.Translate(0, 0, 14);
+		gateFuture.transform.Translate (0,0,14);
 		StartCoroutine("Close");
 	}
 
 	IEnumerator Close() {
-		for (float f = 12f; f >= 0; f-= 0.2f) {
+		for (float f = 14f; f >= 0; f-= 0.2f) {
 			gatePast.transform.Translate(0, 0, -0.2f);
 			gateFuture.transform.Translate(0, 0, -0.2f);
-			yield return new WaitForSeconds(0.1f);
+			yield return new WaitForSeconds(0.15f);
 		}
 		Reset();
 	}
