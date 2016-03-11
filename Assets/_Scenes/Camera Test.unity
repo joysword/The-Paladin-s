@@ -102,6 +102,7 @@ GameObject:
   - 114: {fileID: 91717496}
   - 114: {fileID: 91717495}
   - 114: {fileID: 91717494}
+  - 54: {fileID: 91717503}
   m_Layer: 29
   m_Name: getRealPlayerController
   m_TagString: Player
@@ -306,6 +307,21 @@ CharacterController:
   m_SkinWidth: .0329999998
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!54 &91717503
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 91717493}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &148292732
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,6 +1369,32 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!136 &643581969
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 643581967}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .0936766863
+  m_Height: .528384268
+  m_Direction: 2
+  m_Center: {x: 0, y: -.0599999987, z: .170000002}
+--- !u!114 &643581970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 643581967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a189418b7fe65f4683bd97fa327fa14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  game: {fileID: 517100716}
+  finishText: {fileID: 817252373}
 --- !u!1 &658365669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,6 +1664,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c96340efad90c974caa5c97efd933bf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &817252373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 817252374}
+  - 23: {fileID: 817252376}
+  - 102: {fileID: 817252375}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Finish
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &817252374
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 817252373}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.22000003, z: 6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2138942340}
+  m_RootOrder: 4
+--- !u!102 &817252375
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 817252373}
+  m_Text: You are detected!
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 4
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4281534719
+--- !u!23 &817252376
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 817252373}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!1 &842780002
 GameObject:
   m_ObjectHideFlags: 0
@@ -3383,6 +3501,7 @@ GameObject:
   - 114: {fileID: 2118043785}
   - 114: {fileID: 2118043784}
   - 114: {fileID: 2118043783}
+  - 54: {fileID: 2118043792}
   m_Layer: 29
   m_Name: getRealPlayerController
   m_TagString: Player
@@ -3587,6 +3706,21 @@ CharacterController:
   m_SkinWidth: .0329999998
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!54 &2118043792
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2118043782}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2131650728
 GameObject:
   m_ObjectHideFlags: 0
@@ -3665,6 +3799,7 @@ Transform:
   - {fileID: 2138942351}
   - {fileID: 1263369080}
   - {fileID: 1484091371}
+  - {fileID: 817252374}
   m_Father: {fileID: 1681457760}
   m_RootOrder: 1
 --- !u!1 &2138942341

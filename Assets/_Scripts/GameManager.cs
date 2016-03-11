@@ -12,7 +12,11 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (getReal3D.Input.GetButtonDown("ChangeWand")) {
-			Application.LoadLevel(Application.loadedLevel);
+			ReloadScene ();
 		}
+	}
+
+	public void ReloadScene() {
+		Application.LoadLevel(Application.loadedLevel);
 	}
 }
