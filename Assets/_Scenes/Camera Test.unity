@@ -151,7 +151,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: dc5c3176f624fff4a991e84c8c37f1ad, type: 3}
   m_PrefabInternal: {fileID: 623717288}
->>>>>>> acf3c8af5096de27d801363813fb8da49ed04c30
 --- !u!1 &91717493
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,7 +838,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc5c3176f624fff4a991e84c8c37f1ad, type: 3}
   m_IsPrefabParent: 0
->>>>>>> acf3c8af5096de27d801363813fb8da49ed04c30
 --- !u!1 &396148175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1963,7 +1961,6 @@ CapsuleCollider:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: dc5c3176f624fff4a991e84c8c37f1ad, type: 3}
   m_PrefabInternal: {fileID: 1595631840}
->>>>>>> acf3c8af5096de27d801363813fb8da49ed04c30
 --- !u!1 &877410119
 GameObject:
   m_ObjectHideFlags: 0
