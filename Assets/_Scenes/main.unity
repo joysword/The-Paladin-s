@@ -462,6 +462,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 131688720}
+  - 95: {fileID: 131688721}
   m_Layer: 0
   m_Name: AxePivot
   m_TagString: Untagged
@@ -475,13 +476,30 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 131688719}
-  m_LocalRotation: {x: .0563035309, y: .362181872, z: -.0780308023, w: .92712754}
-  m_LocalPosition: {x: 142.580002, y: 1026.54004, z: 282.109985}
+  m_LocalRotation: {x: -.0237930324, y: .397880465, z: -.241623357, w: .884727776}
+  m_LocalPosition: {x: 140.070007, y: 1026.09998, z: 284.109985}
   m_LocalScale: {x: 1.52398288, y: 1, z: 1.52398276}
   m_Children:
   - {fileID: 1493873735}
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!95 &131688721
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 131688719}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 62d9aa68ecf7c634183c1647237b3199, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &148292732
 GameObject:
   m_ObjectHideFlags: 0
