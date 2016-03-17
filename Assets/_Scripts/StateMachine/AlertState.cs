@@ -26,7 +26,7 @@ public class AlertState : IEnemyState {
             if (enemy.sawPlayer) {
                 chaseTimer += Time.deltaTime;
             }
-            if (chaseTimer >= enemy.maxAlertbeforeChase) {
+            if (chaseTimer >= enemy.maxAlertBeforeChase) {
                 ToChaseState();
             }
         }
@@ -72,7 +72,7 @@ public class AlertState : IEnemyState {
         enemy.transform.Rotate(0, enemy.searchingTurnSpeed * Time.deltaTime, 0);
         patrolTimer += Time.deltaTime;
 
-        if (patrolTimer >= enemy.maxAlertbeforePatrol) {
+        if (patrolTimer >= enemy.maxAlertBeforePatrol) {
             ToPatrolState();
         }
     }

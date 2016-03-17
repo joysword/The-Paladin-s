@@ -9,8 +9,8 @@ public class StatePatternEnemy: MonoBehaviour {
     public Transform eyes;
     public Vector3 offset = new Vector3(0, .5f, 0);
     public MeshRenderer meshRendererFlag;
-    public float maxAlertbeforeChase = 3f;
-    public float maxAlertbeforePatrol = 5f;
+    public float maxAlertBeforeChase = 3f;
+    public float maxAlertBeforePatrol = 5f;
 
     [HideInInspector]
     public Transform chaseTarget;
