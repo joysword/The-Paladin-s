@@ -1858,8 +1858,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 0664bfde9563e9040b4758a8939f98af, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 91717493}
-  m_LocalRotation: {x: 0, y: .382683456, z: 0, w: .923879504}
-  m_LocalPosition: {x: 4, y: -6.44999981, z: 5.5}
+  m_LocalRotation: {x: 0, y: -.372581959, z: 0, w: .927999318}
+  m_LocalPosition: {x: 174.800003, y: 13.3500004, z: 230}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 808870155}
@@ -2617,6 +2617,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetCam: RealCameraPast
+--- !u!1 &1129195151 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100018, guid: 973bf7566d9ed2b44bff8296b4c94897, type: 3}
+  m_PrefabInternal: {fileID: 158068981}
+--- !u!114 &1129195152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1129195151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da983aa5655d2a04888d17dc6a3c4b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1147284006
 Prefab:
   m_ObjectHideFlags: 0
