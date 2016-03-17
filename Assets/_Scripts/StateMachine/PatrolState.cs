@@ -4,7 +4,11 @@ using System.Collections;
 public class PatrolState : IEnemyState {
 
     private readonly StatePatternEnemy enemy;
-    private int nextWatPoint;
+    private int nextWayPoint;
+
+    private void Awake() {
+        nextWayPoint = 0;
+    }
 
     public PatrolState(StatePatternEnemy statePatternEnemy) {
         enemy = statePatternEnemy;
@@ -36,18 +40,19 @@ public class PatrolState : IEnemyState {
     private void Look() {
         RaycastHit hit;
         if (Physics.Raycast(enemy.eyes.transform.position, enemy.eyes.transform.forward, out hit, enemy.sightRange) && hit.collider.CompareTag("Player")) {
-            enemy.chaseTarget = hit.transform;
-            ToChaseState();
+            // enemy.chaseTarget = hit.transform;
+            enemy.sawPlayer = true;
+            ToAlertState();
         }
     }
 
     private void Patrol() {
         enemy.meshRendererFlag.material.color = Color.green;
-        enemy.navMeshAgent.destination = enemy.wayPoints[nextWatPoint].position;
+        enemy.navMeshAgent.destination = enemy.wayPoints[nextWayPoint].position;
         enemy.navMeshAgent.Resume();
 
         if (enemy.navMeshAgent.remainingDistance <= enemy.navMeshAgent.stoppingDistance && !enemy.navMeshAgent.pathPending) {
-            nextWatPoint = (nextWatPoint + 1) % enemy.wayPoints.Length;
+            nextWayPoint = (nextWayPoint + 1) % enemy.wayPoints.Length;
         }
     }
 }

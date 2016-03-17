@@ -37,6 +37,7 @@ public class ChaseState : IEnemyState {
             enemy.chaseTarget = hit.transform;
         }
         else {
+            enemy.sawPlayer = false;
             ToAlertState();
         }
     }

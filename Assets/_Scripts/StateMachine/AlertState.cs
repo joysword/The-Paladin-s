@@ -4,15 +4,33 @@ using System.Collections;
 public class AlertState : IEnemyState {
 
     private readonly StatePatternEnemy enemy;
-    private float searchTimer;
+    private float chaseTimer;
+    private float patrolTimer;
 
     public AlertState(StatePatternEnemy statePatternEnemy) {
         enemy = statePatternEnemy;
     }
 
     public void UpdateState() {
-        Look();
-        Search();
+        if (!enemy.sawPlayer) {
+            chaseTimer = 0f;
+            Look();
+            if (!enemy.sawPlayer) {
+                Search();
+            }
+        }
+        else {
+            patrolTimer = 0f;
+            enemy.transform.LookAt(GameObject.FindGameObjectWithTag("Player").transform);
+            Look();
+            if (enemy.sawPlayer) {
+                chaseTimer += Time.deltaTime;
+            }
+            if (chaseTimer >= enemy.maxAlertbeforeChase) {
+                ToChaseState();
+            }
+        }
+        
     }
 
     public void OnTriggerEnter(Collider other) {
@@ -21,35 +39,40 @@ public class AlertState : IEnemyState {
 
     public void ToPatrolState() {
         enemy.currentState = enemy.patrolState;
-        searchTimer = 0f;
+        chaseTimer = 0f;
+        patrolTimer = 0f;
     }
 
     public void ToAlertState() {
         Debug.Log("Can't transition to same state");
     }
 
-    //public void ToAlertState();
-
     public void ToChaseState() {
         enemy.currentState = enemy.chaseState;
-        searchTimer = 0f;
+        chaseTimer = 0f;
+        patrolTimer = 0f;
     }
 
     private void Look() {
         RaycastHit hit;
         if (Physics.Raycast(enemy.eyes.transform.position, enemy.eyes.transform.forward, out hit, enemy.sightRange) && hit.collider.CompareTag("Player")) {
             enemy.chaseTarget = hit.transform;
-            ToChaseState();
+            enemy.sawPlayer = true;
+        }
+        else {
+            enemy.sawPlayer = false;
         }
     }
 
     private void Search() {
-        enemy.meshRendererFlag.material.color = Color.green;
-        enemy.navMeshAgent.Stop();
-        enemy.transform.Rotate(0, enemy.searchingTurnSpeed * Time.deltaTime, 0);
-        searchTimer += Time.deltaTime;
 
-        if (searchTimer >= enemy.searchingDuration) {
+        enemy.meshRendererFlag.material.color = Color.yellow;
+        enemy.navMeshAgent.Stop();
+        
+        enemy.transform.Rotate(0, enemy.searchingTurnSpeed * Time.deltaTime, 0);
+        patrolTimer += Time.deltaTime;
+
+        if (patrolTimer >= enemy.maxAlertbeforePatrol) {
             ToPatrolState();
         }
     }
