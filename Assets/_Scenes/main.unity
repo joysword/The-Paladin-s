@@ -2091,10 +2091,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 11448280, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
-      propertyPath: TranslationSpeed
-      value: 1.20000005
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
   m_IsPrefabParent: 0
