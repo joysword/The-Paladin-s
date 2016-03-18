@@ -613,11 +613,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: 973bf7566d9ed2b44bff8296b4c94897, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 973bf7566d9ed2b44bff8296b4c94897, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 973bf7566d9ed2b44bff8296b4c94897, type: 3}
       propertyPath: m_RootOrder
@@ -1927,6 +1927,26 @@ Prefab:
       propertyPath: m_Name
       value: trap_door_lever
       objectReference: {fileID: 0}
+    - target: {fileID: 2366534, guid: 2a03e90ca99d1b5489ea59085d3a04e3, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94e8738ea666c6b469154d81dc0e3aa8, type: 2}
+    - target: {fileID: 2393902, guid: 2a03e90ca99d1b5489ea59085d3a04e3, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94e8738ea666c6b469154d81dc0e3aa8, type: 2}
+    - target: {fileID: 2327166, guid: 2a03e90ca99d1b5489ea59085d3a04e3, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94e8738ea666c6b469154d81dc0e3aa8, type: 2}
+    - target: {fileID: 2393310, guid: 2a03e90ca99d1b5489ea59085d3a04e3, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94e8738ea666c6b469154d81dc0e3aa8, type: 2}
+    - target: {fileID: 138876, guid: 2a03e90ca99d1b5489ea59085d3a04e3, type: 2}
+      propertyPath: m_TagString
+      value: TrapLever
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2a03e90ca99d1b5489ea59085d3a04e3, type: 2}
   m_IsPrefabParent: 0
@@ -2651,6 +2671,22 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5ef2abe53ff2f3845a437e38d084c4f6, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1065568059 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 138876, guid: 2a03e90ca99d1b5489ea59085d3a04e3, type: 2}
+  m_PrefabInternal: {fileID: 775778853}
+--- !u!65 &1065568060
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1065568059}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .100000001, y: .100000001, z: .100000001}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1068386672
 Prefab:
   m_ObjectHideFlags: 0
