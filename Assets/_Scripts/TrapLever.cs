@@ -12,12 +12,23 @@ public class TrapLever : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (isActive) {
+			Debug.Log ("LEVER ACTIVE");
+		}
+	}
+	void OnTriggerStay(Collider other)
+	{
+		if (other.gameObject.tag == "Player") {
+
+			isActive = true;
+		}
+	}
+	void OnTriggerExit(Collider other)
+	{
+		if (other.gameObject.tag == "Player") {
+			
+			isActive = false;
+		}
 	}
 
-	void OnCollisionEnter(Collision col) {
-		//if (col.gameObject.tag == "Player") {
-			Debug.Log ("LEVER ACTIVE");
-		//}
-	}
 }
