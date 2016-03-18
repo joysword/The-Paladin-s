@@ -8,6 +8,7 @@ TagManager:
   - Leaves
   - HelperCamera
   - TrapLever
+  - FuturePlayer
   layers:
   - Default
   - TransparentFX
