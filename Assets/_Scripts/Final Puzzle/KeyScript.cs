@@ -4,7 +4,7 @@ using System.Collections;
 public class KeyScript : MonoBehaviour {
     public bool picked = false;
     public GameObject finishTextPast;
-    public GameObject finishTextFuture;
+    // public GameObject finishTextFuture;
 
     // Use this for initialization
     void Start() {
@@ -25,12 +25,12 @@ public class KeyScript : MonoBehaviour {
 
     IEnumerator ShowText() {
         finishTextPast.GetComponent<TextMesh>().text = "key acquired!";
-        finishTextFuture.GetComponent<TextMesh>().text = "key acquired!";
+        //finishTextFuture.GetComponent<TextMesh>().text = "key acquired!";
         finishTextPast.SetActive(true);
-        finishTextFuture.SetActive(true);
+        //finishTextFuture.SetActive(true);
         yield return new WaitForSeconds(3);
         finishTextPast.SetActive(false);
-        finishTextFuture.SetActive(false);
+        //finishTextFuture.SetActive(false);
     }
 
 }

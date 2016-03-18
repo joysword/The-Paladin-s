@@ -35,14 +35,15 @@ public class GateScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if(key.GetComponent<KeyScript>().picked)
-		{
-			GetComponent<BoxCollider>().enabled = false;
-			opening = true;
-			Invoke("Stop",5);
-		}
-        else {
-            StartCoroutine("ShowText");
+        if (other.CompareTag("Player")) {
+            if (key.GetComponent<KeyScript>().picked) {
+                GetComponent<BoxCollider>().enabled = false;
+                opening = true;
+                Invoke("Stop", 5);
+            }
+            else {
+                StartCoroutine("ShowText");
+            }
         }
 	}
 
