@@ -32,7 +32,7 @@ public class GateScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if(key.GetComponent<KeyScript>().Picked)
+		if(key.GetComponent<KeyScript>().picked)
 		{
 			GetComponent<BoxCollider>().enabled = false;
 			opening = true;

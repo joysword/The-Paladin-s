@@ -9631,7 +9631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   searchingTurnSpeed: 120
-  sightRange: 150
+  sightRange: 100
   wayPoints:
   - {fileID: 0}
   - {fileID: 0}

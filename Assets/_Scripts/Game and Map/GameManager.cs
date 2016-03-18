@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour {
         ReloadScene();
     }
     public void Restart() {
-        Time.timeScale = 0;
         StartCoroutine("Respawn");
     }
 }
