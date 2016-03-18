@@ -21,6 +21,7 @@ public class PatrolState : IEnemyState {
 
     public void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Player")) {
+            Debug.Log("felt player is nearby when patroling");
             ToAlertState();
         }
     }
@@ -31,10 +32,12 @@ public class PatrolState : IEnemyState {
 
     public void ToAlertState() {
         enemy.currentState = enemy.alertState;
+        enemy.meshRendererFlag.material.color = Color.yellow;
+        Debug.Log("transitioning from Patrol to Alert");
     }
 
     public void ToChaseState() {
-        enemy.currentState = enemy.chaseState;
+        Debug.Log("Can't transition from Patrol state to Chase state");
     }
 
     private void Look() {
@@ -42,12 +45,12 @@ public class PatrolState : IEnemyState {
         if (Physics.Raycast(enemy.eyes.transform.position, enemy.eyes.transform.forward, out hit, enemy.sightRange) && hit.collider.CompareTag("Player")) {
             // enemy.chaseTarget = hit.transform;
             enemy.sawPlayer = true;
+            Debug.Log("saw player when patroling");
             ToAlertState();
         }
     }
 
     private void Patrol() {
-        enemy.meshRendererFlag.material.color = Color.green;
         enemy.navMeshAgent.destination = enemy.wayPoints[nextWayPoint].position;
         enemy.navMeshAgent.Resume();
 

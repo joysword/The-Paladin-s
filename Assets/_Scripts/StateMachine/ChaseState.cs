@@ -24,6 +24,7 @@ public class ChaseState : IEnemyState {
 
     public void ToAlertState() {
         enemy.currentState = enemy.alertState;
+        enemy.meshRendererFlag.material.color = Color.yellow;
     }
 
     public void ToChaseState() {
@@ -43,9 +44,8 @@ public class ChaseState : IEnemyState {
     }
 
     private void Chase() {
-        enemy.meshRendererFlag.material.color = Color.red;
         enemy.navMeshAgent.destination = enemy.chaseTarget.position;
-		enemy.navMeshAgent.speed = 20;
+		enemy.navMeshAgent.speed = 10f;
         enemy.navMeshAgent.Resume();
     }
 }
