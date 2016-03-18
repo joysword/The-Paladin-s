@@ -58,9 +58,11 @@ public class AlertState : IEnemyState {
         if (Physics.Raycast(enemy.eyes.transform.position, enemy.eyes.transform.forward, out hit, enemy.sightRange) && hit.collider.CompareTag("Player")) {
             enemy.chaseTarget = hit.transform;
             enemy.sawPlayer = true;
+			Debug.Log ("DETECTED");
         }
         else {
             enemy.sawPlayer = false;
+			Debug.Log ("NOT DETECTED");
         }
     }
 
