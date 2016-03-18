@@ -15,7 +15,7 @@ public class TrapTriggerScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		if(other.name == "guard"){
-			var trapdoor = GameObject.Find ("trap_door_levr");
+			var trapdoor = GameObject.Find ("trap_door_lever");
 			bool isDown = trapdoor.GetComponent<TrapLever> ().trapDown;
 			if(isDown){
 				GameObject.Destroy(other.gameObject);

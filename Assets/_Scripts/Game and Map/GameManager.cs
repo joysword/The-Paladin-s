@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using getReal3D;
 
 public class GameManager : MonoBehaviour {
 

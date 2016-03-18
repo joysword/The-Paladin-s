@@ -8,8 +8,8 @@ TagManager:
   - Leaves
   - HelperCamera
   - TrapLever
-  - FuturePlayer
   - TrapDoor1
+  - GameManager
   layers:
   - Default
   - TransparentFX
