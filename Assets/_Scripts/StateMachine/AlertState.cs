@@ -55,6 +55,7 @@ public class AlertState : IEnemyState {
 
     private void Look() {
         RaycastHit hit;
+		Debug.Log ("RAYCASTING");
         if (Physics.Raycast(enemy.eyes.transform.position, enemy.eyes.transform.forward, out hit, enemy.sightRange) && hit.collider.CompareTag("Player")) {
             enemy.chaseTarget = hit.transform;
             enemy.sawPlayer = true;
