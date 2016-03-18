@@ -7,9 +7,15 @@ public class MapScript : MonoBehaviour {
 	void Start ()
     {        
         // add mesh colliders
-        foreach(Transform c in transform)
-        {
-            c.gameObject.AddComponent<MeshCollider>();
-        }	
+		AddColliders(transform);	
+	}
+
+	void AddColliders(Transform t)
+	{
+		foreach(Transform c in t)
+		{
+			c.gameObject.AddComponent<MeshCollider>();
+			AddColliders(c);
+		}
 	}
 }
