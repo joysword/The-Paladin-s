@@ -37,7 +37,7 @@ public class StatePatternEnemy: MonoBehaviour {
         sawPlayer = false;
 
         navMeshAgent = GetComponent<NavMeshAgent>();
-        //navMeshAgent.speed = 5f;
+        navMeshAgent.speed = 3f;
     }
 
     void Start() {

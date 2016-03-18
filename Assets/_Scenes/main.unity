@@ -7241,7 +7241,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1900144443}
   - 95: {fileID: 1900144444}
-  - 65: {fileID: 1900144446}
   - 114: {fileID: 1900144445}
   - 122: {fileID: 1900144447}
   m_Layer: 0
@@ -7300,18 +7299,8 @@ MonoBehaviour:
   trapDown: 0
   Glow: {fileID: 0}
   Normal: {fileID: 0}
---- !u!65 &1900144446
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1900144442}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: .14086239, y: .0985015929, z: .102342568}
-  m_Center: {x: -.0394574553, y: -.000749678293, z: .0306489933}
+  activateDistance: 5
+  player: {fileID: 395067917}
 --- !u!122 &1900144447
 Halo:
   m_ObjectHideFlags: 0

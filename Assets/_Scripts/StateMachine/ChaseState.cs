@@ -45,7 +45,7 @@ public class ChaseState : IEnemyState {
 
     private void Chase() {
         enemy.navMeshAgent.destination = enemy.chaseTarget.position;
-		enemy.navMeshAgent.speed = 10f;
+		//enemy.navMeshAgent.speed = 10f;
         enemy.navMeshAgent.Resume();
     }
 }
