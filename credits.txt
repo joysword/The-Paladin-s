@@ -3,3 +3,4 @@ fire sound  - https://www.freesound.org/people/leosalom/sounds/234288/
 bark2.png - http://woodyplants.wdfiles.com/local--files/liriodendron-tulipifera/liriodendron_tulipifera_bark.JPG
 oak leaf - http://www.oakfurnitureuk.co/media/vortex/blog/media/2012/11/oak-leaf-oak-furniture-uk.1441991483.jpg
 oak bark - https://losangelesloveaffair.files.wordpress.com/2012/05/dscn0436.jpg
+State Machine Scripts - http://unity3d.com/cn/learn/tutorials/modules/beginner/live-training-archive/state-machine-interface

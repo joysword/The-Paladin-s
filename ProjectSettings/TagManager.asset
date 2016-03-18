@@ -11,6 +11,8 @@ TagManager:
   - TrapDoor1
   - GameManager
   - Guard
+  - FinishTextPast
+  - FinishTextFuture
   layers:
   - Default
   - TransparentFX

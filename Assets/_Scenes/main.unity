@@ -417,12 +417,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 59633603}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3a2dedcc51101f42987effc9438ebb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Picked: 0
+  picked: 0
+  finishTextPast: {fileID: 1414853861}
 --- !u!65 &59633608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -988,6 +989,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14c40591ba90c7d48a4121edb0abf214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  finishTextPast: {fileID: 1414853861}
+  finishTextFuture: {fileID: 1151319141}
 --- !u!65 &230563834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2595,6 +2598,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a189418b7fe65f4683bd97fa327fa14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  finishTextPast: {fileID: 1414853861}
+  finishTextFuture: {fileID: 1151319141}
 --- !u!1 &658365669
 GameObject:
   m_ObjectHideFlags: 0
@@ -2906,6 +2911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd7ef1a1d26f47479f42584f236c8a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  finishTextPast: {fileID: 1414853861}
 --- !u!1 &809898739
 GameObject:
   m_ObjectHideFlags: 0
@@ -4096,6 +4102,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dc5c3176f624fff4a991e84c8c37f1ad, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1151319141 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 137010, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
+  m_PrefabInternal: {fileID: 1853013609}
 --- !u!1 &1190477005
 GameObject:
   m_ObjectHideFlags: 0
@@ -4993,6 +5003,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!1 &1414853861 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 137010, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
+  m_PrefabInternal: {fileID: 491922153}
 --- !u!1 &1415263900
 GameObject:
   m_ObjectHideFlags: 0
@@ -6352,6 +6366,25 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 421248, guid: 83c5837b3e3b08e4eadea80624eaed27, type: 2}
   m_PrefabInternal: {fileID: 1660821533}
+--- !u!1 &1660821535 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 124030, guid: 83c5837b3e3b08e4eadea80624eaed27, type: 2}
+  m_PrefabInternal: {fileID: 1660821533}
+--- !u!54 &1660821536
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1660821535}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1664386426
 Prefab:
   m_ObjectHideFlags: 0
@@ -6933,6 +6966,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 137010, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
+      propertyPath: m_TagString
+      value: FinishTextFuture
+      objectReference: {fileID: 0}
+    - target: {fileID: 137010, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
   m_IsPrefabParent: 0
@@ -7241,7 +7282,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1900144443}
   - 95: {fileID: 1900144444}
-  - 65: {fileID: 1900144446}
   - 114: {fileID: 1900144445}
   - 122: {fileID: 1900144447}
   m_Layer: 0
@@ -7300,18 +7340,8 @@ MonoBehaviour:
   trapDown: 0
   Glow: {fileID: 0}
   Normal: {fileID: 0}
---- !u!65 &1900144446
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1900144442}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: .14086239, y: .0985015929, z: .102342568}
-  m_Center: {x: -.0394574553, y: -.000749678293, z: .0306489933}
+  activateDistance: 5
+  player: {fileID: 395067917}
 --- !u!122 &1900144447
 Halo:
   m_ObjectHideFlags: 0

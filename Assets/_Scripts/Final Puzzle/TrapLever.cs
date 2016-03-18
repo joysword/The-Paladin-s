@@ -8,7 +8,8 @@ public class TrapLever : MonoBehaviour {
 	public Material Glow;
 	public Material Normal;
 
-
+    public float activateDistance = 10f;
+    public GameObject player;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +18,18 @@ public class TrapLever : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown("e")){
+        if (!isActive) {
+            if (Vector3.Distance(player.transform.position, this.transform.position) < activateDistance) {
+                TurnOnHalo();
+            }
+        }
+        else {
+            if (Vector3.Distance(player.transform.position, this.transform.position) > activateDistance) {
+                TurnOffHalo();
+            }
+        }
+
+		if (Input.GetKeyDown("f")){
 			if (isActive) {
 				Debug.Log ("LEVER ACTIVE");
 				var trap = GameObject.FindGameObjectWithTag("TrapDoor1");
@@ -34,39 +46,33 @@ public class TrapLever : MonoBehaviour {
 		}
 
 	}
-	void OnTriggerStay(Collider other)
+	void TurnOnHalo()
 	{
-		if (other.gameObject.tag == "Player") {
-			Component halo = GetComponent("Halo"); 
-			halo.GetType().GetProperty("enabled").SetValue(halo,true,null);
-			var materials = GetComponentsInChildren<Renderer>();
-			//var materials = GetComponentsInChildren<Renderer>().materials;
-			Debug.Log ("Materail count: " + materials.Length);
-			foreach ( var x in materials){
-				Debug.Log ("Materail name: " + x);
-				x.material.SetColor("_Color",Color.red);
-			}
-
-			isActive = true;
+		
+		Component halo = GetComponent("Halo"); 
+		halo.GetType().GetProperty("enabled").SetValue(halo,true,null);
+		var materials = GetComponentsInChildren<Renderer>();
+		//var materials = GetComponentsInChildren<Renderer>().materials;
+		Debug.Log ("Materail count: " + materials.Length);
+		foreach ( var x in materials){
+			Debug.Log ("Materail name: " + x);
+			x.material.SetColor("_Color",Color.red);
 		}
+
+        isActive = true;
 	}
-	void OnTriggerExit(Collider other)
+	void TurnOffHalo()
 	{
-		if (other.gameObject.tag == "Player") {
-			Component halo = GetComponent("Halo"); 
-			halo.GetType().GetProperty("enabled").SetValue(halo,false,null);
-			var materials = GetComponentsInChildren<Renderer>();
-			//var materials = GetComponentsInChildren<Renderer>().materials;
-			Debug.Log ("Materail count: " + materials.Length);
-			foreach ( var x in materials){
-				Debug.Log ("Materail name: " + x);
-				x.material.SetColor("_Color",Color.white);
-			}
-
-			isActive = false;
+		Component halo = GetComponent("Halo"); 
+		halo.GetType().GetProperty("enabled").SetValue(halo,false,null);
+		var materials = GetComponentsInChildren<Renderer>();
+		//var materials = GetComponentsInChildren<Renderer>().materials;
+		Debug.Log ("Materail count: " + materials.Length);
+		foreach ( var x in materials){
+			Debug.Log ("Materail name: " + x);
+			x.material.SetColor("_Color",Color.white);
 		}
+
+		isActive = false;
 	}
-
-
-
 }
