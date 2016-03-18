@@ -23,7 +23,7 @@ public class LeavesPastBBScript : MonoBehaviour
         {
             FindLeavesRec(c);
 
-            if (c.tag == "Leaves")
+            if (c.tag == "Leaves" || c.name.IndexOf("Leaves") == 0)
                 allLeaves.Add(c);
         }
     }

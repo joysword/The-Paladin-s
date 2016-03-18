@@ -423,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   picked: 0
-  finishTextPast: {fileID: 0}
+  finishTextPast: {fileID: 491922154}
 --- !u!65 &59633608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -997,6 +997,19 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 199156, guid: dc51408110f203447a472df73b5a3281, type: 2}
   m_PrefabInternal: {fileID: 1493873734}
+--- !u!114 &230563831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 230563830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c40591ba90c7d48a4121edb0abf214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finishTextPast: {fileID: 491922154}
+  finishTextFuture: {fileID: 817252373}
 --- !u!65 &230563834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2080,6 +2093,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &491922154 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 137010, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
+  m_PrefabInternal: {fileID: 491922153}
 --- !u!1 &505447455
 GameObject:
   m_ObjectHideFlags: 0
@@ -2897,7 +2914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd7ef1a1d26f47479f42584f236c8a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finishTextPast: {fileID: 0}
+  finishTextPast: {fileID: 491922154}
 --- !u!1 &809898739
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,7 +2987,7 @@ GameObject:
   - 102: {fileID: 817252375}
   m_Layer: 0
   m_Name: Text
-  m_TagString: Finish
+  m_TagString: FinishTextFuture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8361,7 +8378,7 @@ MonoBehaviour:
   yawAxis: Yaw
   pitchAxis: Pitch
   resetButton: 
-  RotationSpeed: 30
+  RotationSpeed: 45
   rotationAround: 1
   rotationAroundReference: {fileID: 0}
   rotationFollows: 0
@@ -8378,7 +8395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e256e1d555cc25e418af491fd9328db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TranslationSpeed: 1
+  TranslationSpeed: .600000024
   forwardAxis: Forward
   strafeAxis: Strafe
   navSpeedButton: NavSpeed
