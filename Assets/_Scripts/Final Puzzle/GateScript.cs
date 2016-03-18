@@ -7,8 +7,11 @@ public class GateScript : MonoBehaviour {
 	GameObject gateFuture;
 	GameObject key;
 	bool opening = false;
-	// Use this for initialization
-	void Start () {
+
+    public GameObject finishTextPast;
+
+    // Use this for initialization
+    void Start () {
 		key = GameObject.Find("key");
 		gatePast = GameObject.Find("TombGatePast");
 		gateFuture = GameObject.Find("TombGateFuture");
@@ -38,5 +41,18 @@ public class GateScript : MonoBehaviour {
 			opening = true;
 			Invoke("Stop",5);
 		}
+        else {
+            StartCoroutine("ShowText");
+        }
 	}
+
+    IEnumerator ShowText() {
+        finishTextPast.GetComponent<TextMesh>().text = "This gate needs a key to open!";
+        //finishTextFuture.GetComponent<TextMesh>().text = "key acquired!";
+        finishTextPast.SetActive(true);
+        //finishTextFuture.SetActive(true);
+        yield return new WaitForSeconds(3);
+        finishTextPast.SetActive(false);
+        //finishTextFuture.SetActive(false);
+    }
 }
