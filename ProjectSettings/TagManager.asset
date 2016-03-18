@@ -9,6 +9,7 @@ TagManager:
   - HelperCamera
   - TrapLever
   - FuturePlayer
+  - TrapDoor1
   layers:
   - Default
   - TransparentFX
