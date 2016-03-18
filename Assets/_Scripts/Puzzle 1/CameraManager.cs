@@ -4,7 +4,8 @@ using System.Collections;
 public class CameraManager : MonoBehaviour {
 
 	public GameManager game;
-	public GameObject finishText;
+	public GameObject finishTextPast;
+    public GameObject finishTextFuture;
 
 	// Use this for initialization
 	void Start () {
@@ -18,13 +19,9 @@ public class CameraManager : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.tag == "Player") {
-			finishText.SetActive(true);
-			StartCoroutine("Respawn");
+			finishTextPast.SetActive(true);
+            finishTextFuture.SetActive(true);
+            game.Restart();
 		}
-	}
-
-	IEnumerator Respawn() {
-		yield return new WaitForSeconds(3);
-		game.ReloadScene();
 	}
 }

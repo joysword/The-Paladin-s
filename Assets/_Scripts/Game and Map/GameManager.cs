@@ -19,4 +19,13 @@ public class GameManager : MonoBehaviour {
 	public void ReloadScene() {
 		Application.LoadLevel(Application.loadedLevel);
 	}
+
+    IEnumerator Respawn() {
+        yield return new WaitForSeconds(3);
+        ReloadScene();
+    }
+    public void Restart() {
+        Time.timeScale = 0;
+        StartCoroutine("Respawn");
+    }
 }
