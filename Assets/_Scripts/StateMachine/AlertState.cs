@@ -21,10 +21,11 @@ public class AlertState : IEnemyState {
         }
         else {
             patrolTimer = 0f;
-            enemy.transform.LookAt(GameObject.FindGameObjectWithTag("Player").transform);
+            enemy.transform.LookAt(enemy.target.transform);
             Look();
             if (enemy.sawPlayer) {
                 chaseTimer += Time.deltaTime;
+                //Debug.Log("chaseTimer:"+chaseTimer);
             }
             if (chaseTimer >= enemy.maxAlertBeforeChase) {
                 ToChaseState();
@@ -39,6 +40,7 @@ public class AlertState : IEnemyState {
 
     public void ToPatrolState() {
         enemy.currentState = enemy.patrolState;
+        enemy.meshRendererFlag.material.color = Color.green;
         chaseTimer = 0f;
         patrolTimer = 0f;
     }
@@ -49,26 +51,27 @@ public class AlertState : IEnemyState {
 
     public void ToChaseState() {
         enemy.currentState = enemy.chaseState;
+        enemy.meshRendererFlag.material.color = Color.red;
         chaseTimer = 0f;
         patrolTimer = 0f;
     }
 
     private void Look() {
         RaycastHit hit;
+		Debug.Log ("RAYCASTING");
         if (Physics.Raycast(enemy.eyes.transform.position, enemy.eyes.transform.forward, out hit, enemy.sightRange) && hit.collider.CompareTag("Player")) {
             enemy.chaseTarget = hit.transform;
             enemy.sawPlayer = true;
-			Debug.Log ("DETECTED");
+            Debug.Log("saw player when alerting");
         }
         else {
             enemy.sawPlayer = false;
-			Debug.Log ("NOT DETECTED");
+			Debug.Log("lost player when alerting");
         }
     }
 
     private void Search() {
 
-        enemy.meshRendererFlag.material.color = Color.yellow;
         enemy.navMeshAgent.Stop();
         
         enemy.transform.Rotate(0, enemy.searchingTurnSpeed * Time.deltaTime, 0);
