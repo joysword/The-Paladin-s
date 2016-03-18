@@ -14,13 +14,16 @@ public class TrapTriggerScript : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		if(other.name == "guard"){
-			var trapdoor = GameObject.Find ("trap_door_lever");
-			bool isDown = trapdoor.GetComponent<TrapLever> ().trapDown;
-			if(isDown){
-				GameObject.Destroy(other.gameObject);
-			}
-		}
+
+
+		if(other.tag == "Guard"){
+			Debug.Log ("GUARD TOUCHING THE COLLIDER");
+			//var trapdoor = GameObject.Find ("trap_door_lever");
+			//bool isDown = trapdoor.GetComponent<TrapLever> ().trapDown;
+			//if(isDown){
+			//	GameObject.Destroy(other.gameObject);
+			//}
+		}//*/
 
 	}
 }

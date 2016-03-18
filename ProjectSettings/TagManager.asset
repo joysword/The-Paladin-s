@@ -10,6 +10,7 @@ TagManager:
   - TrapLever
   - TrapDoor1
   - GameManager
+  - Guard
   layers:
   - Default
   - TransparentFX
