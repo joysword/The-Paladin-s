@@ -2089,7 +2089,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 427168, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 125136, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
+      propertyPath: m_Name
+      value: getRealPlayerController
+      objectReference: {fileID: 0}
+    - target: {fileID: 125136, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11408280, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
@@ -6465,7 +6477,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1681457760
 Transform:
   m_ObjectHideFlags: 0
