@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GateScript : MonoBehaviour {
+public class GateScript : MonoBehaviour, IPromptable {
 
 	GameObject gatePast;
 	GameObject gateFuture;
@@ -33,7 +33,7 @@ public class GateScript : MonoBehaviour {
 		opening = false;
 	}
 
-	void OnTriggerEnter(Collider other)
+	public void OnTriggerEnter(Collider other)
 	{
         if (other.CompareTag("Player")) {
             if (key.GetComponent<KeyScript>().picked) {
@@ -47,7 +47,7 @@ public class GateScript : MonoBehaviour {
         }
 	}
 
-    IEnumerator ShowText() {
+    public IEnumerator ShowText() {
         finishTextPast.GetComponent<TextMesh>().text = "This gate needs a key to open!";
         //finishTextFuture.GetComponent<TextMesh>().text = "key acquired!";
         finishTextPast.SetActive(true);
