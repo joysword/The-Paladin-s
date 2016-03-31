@@ -34,7 +34,7 @@ public abstract class HighlightableBase : MonoBehaviour {
         //var materials = GetComponentsInChildren<Renderer>().materials;
         Debug.Log("Materail count: " + materials.Length);
         foreach (var x in materials) {
-            Debug.Log("Materail name: " + x);
+            Debug.Log("Material name: " + x);
             x.material.SetColor("_Color", Color.red);
         }
     }
@@ -46,7 +46,7 @@ public abstract class HighlightableBase : MonoBehaviour {
         //var materials = GetComponentsInChildren<Renderer>().materials;
         Debug.Log("Materail count: " + materials.Length);
         foreach (var x in materials) {
-            Debug.Log("Materail name: " + x);
+            Debug.Log("Material name: " + x);
             x.material.SetColor("_Color", Color.white);
         }
     }
