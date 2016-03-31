@@ -3,6 +3,9 @@ using System.Collections;
 
 public abstract class HighlightableBase : MonoBehaviour {
 
+    public Material Glow;
+    public Material Normal;
+
     protected bool isHighlighted;
 
     public float highlightDistance = 10f;

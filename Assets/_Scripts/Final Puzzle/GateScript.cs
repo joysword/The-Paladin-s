@@ -8,7 +8,8 @@ public class GateScript : MonoBehaviour, IPromptable {
 	GameObject key;
 	bool opening = false;
 
-    public GameObject finishTextPast;
+    public GameObject promptTextPast;
+    public GameObject promptTextFuture;
 
     // Use this for initialization
     void Start () {
@@ -48,12 +49,12 @@ public class GateScript : MonoBehaviour, IPromptable {
 	}
 
     public IEnumerator ShowText() {
-        finishTextPast.GetComponent<TextMesh>().text = "This gate needs a key to open!";
-        //finishTextFuture.GetComponent<TextMesh>().text = "key acquired!";
-        finishTextPast.SetActive(true);
-        //finishTextFuture.SetActive(true);
+        promptTextPast.GetComponent<TextMesh>().text = "This gate needs a key to open!";
+        promptTextFuture.GetComponent<TextMesh>().text = "This gate needs a key to open!";
+        promptTextPast.SetActive(true);
+        promptTextFuture.SetActive(true);
         yield return new WaitForSeconds(3);
-        finishTextPast.SetActive(false);
-        //finishTextFuture.SetActive(false);
+        promptTextPast.SetActive(false);
+        promptTextFuture.SetActive(false);
     }
 }
