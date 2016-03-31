@@ -11,6 +11,8 @@ GameObject:
   - 33: {fileID: 3335066}
   - 23: {fileID: 2369194}
   - 95: {fileID: 9520702}
+  - 65: {fileID: 6574256}
+  - 114: {fileID: 11492588}
   m_Layer: 0
   m_Name: key
   m_TagString: Untagged
@@ -25,8 +27,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172972}
   m_LocalRotation: {x: -.70702064, y: -.705345035, z: -.0394259058, w: -.0324929394}
-  m_LocalPosition: {x: -15.4890003, y: 2.38560009, z: 15.9189997}
-  m_LocalScale: {x: 6.27829552, y: 6.27829552, z: 6.27829552}
+  m_LocalPosition: {x: 143.179993, y: 1014.78998, z: 286.309998}
+  m_LocalScale: {x: 23.9198856, y: 23.9198799, z: 23.9198799}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,6 +65,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172972}
   m_Mesh: {fileID: 4300000, guid: ba956264b59cd6b4d913c1589fe2cfb8, type: 3}
+--- !u!65 &6574256
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172972}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .0556943491, y: .0599999987, z: .0500000007}
+  m_Center: {x: -.0153471753, y: -4.76483393e-07, z: 9.53674316e-07}
 --- !u!95 &9520702
 Animator:
   serializedVersion: 3
@@ -72,7 +86,7 @@ Animator:
   m_GameObject: {fileID: 172972}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: ba956264b59cd6b4d913c1589fe2cfb8, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f2afa1ad6e50021439d23d821a8369a7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -80,6 +94,23 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11492588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 172972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3a2dedcc51101f42987effc9438ebb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlightDistance: 10
+  player: {fileID: 0}
+  picked: 0
+  Glow: {fileID: 0}
+  Normal: {fileID: 0}
+  finishTextPast: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
