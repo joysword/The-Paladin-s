@@ -2,6 +2,13 @@
 using System.Collections;
 
 public class KeyScript : PickableBase {
+
+    public Material Glow;
+    public Material Normal;
+
+    //public float activateDistance = 10f;
+    //public GameObject player;
+
     public GameObject finishTextPast;
     // public GameObject finishTextFuture;
 
@@ -12,7 +19,7 @@ public class KeyScript : PickableBase {
 
     // Update is called once per frame
     void Update() {
-        Debug.Log(picked);
+        UpdateHighlight();
     }
 
     override public IEnumerator ShowText() {
@@ -24,5 +31,4 @@ public class KeyScript : PickableBase {
         finishTextPast.SetActive(false);
         //finishTextFuture.SetActive(false);
     }
-
 }
