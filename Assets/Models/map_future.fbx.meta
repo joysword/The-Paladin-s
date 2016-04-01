@@ -1,0 +1,145 @@
+fileFormatVersion: 2
+guid: 2c30c844bef85174b9b45d6d43db398d
+timeCreated: 1459483956
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: bridge1
+    100002: catacombs2
+    100004: lock1.001
+    100006: lock2.001
+    100008: //RootNode
+    100010: map_grass
+    100012: map_rock
+    100014: map_rock_MeshPart0
+    100016: map_rock_MeshPart1
+    100018: map_rock_MeshPart2
+    100020: map_sand
+    100022: map_water
+    100024: portal2
+    100026: support2
+    100028: tomb1.001
+    100030: track
+    400000: bridge1
+    400002: catacombs2
+    400004: lock1.001
+    400006: lock2.001
+    400008: //RootNode
+    400010: map_grass
+    400012: map_rock
+    400014: map_rock_MeshPart0
+    400016: map_rock_MeshPart1
+    400018: map_rock_MeshPart2
+    400020: map_sand
+    400022: map_water
+    400024: portal2
+    400026: support2
+    400028: tomb1.001
+    400030: track
+    2300000: bridge1
+    2300002: catacombs2
+    2300004: lock1.001
+    2300006: lock2.001
+    2300008: map_grass
+    2300010: map_rock_MeshPart0
+    2300012: map_rock_MeshPart1
+    2300014: map_rock_MeshPart2
+    2300016: map_sand
+    2300018: map_water
+    2300020: portal2
+    2300022: support2
+    2300024: tomb1.001
+    2300026: track
+    3300000: bridge1
+    3300002: catacombs2
+    3300004: lock1.001
+    3300006: lock2.001
+    3300008: map_grass
+    3300010: map_rock_MeshPart0
+    3300012: map_rock_MeshPart1
+    3300014: map_rock_MeshPart2
+    3300016: map_sand
+    3300018: map_water
+    3300020: portal2
+    3300022: support2
+    3300024: tomb1.001
+    3300026: track
+    4300000: map_grass
+    4300002: map_rock_MeshPart0
+    4300004: map_rock_MeshPart1
+    4300006: map_rock_MeshPart2
+    4300008: map_sand
+    4300010: track
+    4300012: bridge1
+    4300014: catacombs2
+    4300016: tomb1.001
+    4300018: map_water
+    4300020: portal2
+    4300022: lock1.001
+    4300024: lock2.001
+    4300026: support2
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
