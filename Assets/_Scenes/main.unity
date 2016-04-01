@@ -5204,6 +5204,21 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400008, guid: 2c30c844bef85174b9b45d6d43db398d, type: 3}
   m_PrefabInternal: {fileID: 1108457777}
+--- !u!1 &1108457779 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100008, guid: 2c30c844bef85174b9b45d6d43db398d, type: 3}
+  m_PrefabInternal: {fileID: 1108457777}
+--- !u!114 &1108457780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1108457779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da983aa5655d2a04888d17dc6a3c4b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1147284006
 Prefab:
   m_ObjectHideFlags: 0
@@ -5456,6 +5471,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1852281410}
+  - 114: {fileID: 1180985717}
   m_Layer: 0
   m_Name: map_past
   m_TagString: Untagged
@@ -5463,6 +5479,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1180985717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1180985716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da983aa5655d2a04888d17dc6a3c4b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1190477005
 GameObject:
   m_ObjectHideFlags: 0
