@@ -7,6 +7,7 @@ public class NarrowSpotManager : MonoBehaviour, IPromptable {
     //GameObject board1;
     GameObject board2;
     GameObject board3;
+    public GameObject boardOnCanyon;
 
     const string defaultText = "Seems that we can put a wooden board here";
 
@@ -19,8 +20,11 @@ public class NarrowSpotManager : MonoBehaviour, IPromptable {
     public void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
             if (board3.GetComponent<BoardManager>().picked) {
+                promptTextPast.GetComponent<TextMesh>().text = "wooden board is put over the canyon";
+                boardOnCanyon.SetActive(true);
+                Debug.Log("hererereree");
                 GetComponent<BoxCollider>().enabled = false;
-                // TODO: put board here
+                StartCoroutine("ShowText");
             }
             else if (board2.GetComponent<BoardManager>().picked) {
                 promptTextPast.GetComponent<TextMesh>().text = "The wooden board(s) you have are too short";
