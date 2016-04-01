@@ -15,7 +15,9 @@ public class AxeTriggerScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		GameObject.Find("AxePivot").GetComponent<AxeSwing>().Activate();
-		Destroy(this);
+        if (other.CompareTag("Player")) {
+            GameObject.Find("AxePivot").GetComponent<AxeSwing>().Activate();
+            Destroy(this);
+        }
 	}
 }
