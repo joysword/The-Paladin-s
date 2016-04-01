@@ -5348,6 +5348,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c7a1373a6fd574e9acde026db39e5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPointsPast:
+  - {fileID: 1616365357}
+  - {fileID: 376735809}
+  - {fileID: 522799557}
+  - {fileID: 1369884965}
+  spawnPointsFuture:
+  - {fileID: 1425565202}
+  - {fileID: 196281521}
+  - {fileID: 865647694}
+  - {fileID: 178153782}
+  player1: {fileID: 395067917}
+  player2: {fileID: 2118043782}
 --- !u!4 &517100717
 Transform:
   m_ObjectHideFlags: 0
