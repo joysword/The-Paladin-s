@@ -11,6 +11,8 @@ GameObject:
   - 33: {fileID: 3353180}
   - 23: {fileID: 2315096}
   - 95: {fileID: 9519956}
+  - 65: {fileID: 6548846}
+  - 114: {fileID: 11478198}
   m_Layer: 0
   m_Name: axe
   m_TagString: Untagged
@@ -24,9 +26,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199156}
-  m_LocalRotation: {x: -.252862424, y: -.252862632, z: .660349071, w: .660348594}
-  m_LocalPosition: {x: 183.722961, y: 1046.69995, z: 228.692886}
-  m_LocalScale: {x: 76.0481949, y: 76.048233, z: 19.7176285}
+  m_LocalRotation: {x: -.00498602726, y: -.00498570688, z: .707089424, w: .707089007}
+  m_LocalPosition: {x: -.0169307645, y: -10.4969444, z: -.0247442853}
+  m_LocalScale: {x: 187.59021, y: 123.092209, z: 31.9150982}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,6 +65,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199156}
   m_Mesh: {fileID: 4300000, guid: 40a273b60e1f9a5449555c7c70237926, type: 3}
+--- !u!65 &6548846
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199156}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .0520478711, y: .0250000041, z: .0082113957}
+  m_Center: {x: .0139493877, y: 2.38002841e-07, z: 4.6692486e-07}
 --- !u!95 &9519956
 Animator:
   serializedVersion: 3
@@ -70,7 +84,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199156}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 40a273b60e1f9a5449555c7c70237926, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
@@ -80,6 +94,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11478198
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c40591ba90c7d48a4121edb0abf214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finishTextPast: {fileID: 0}
+  finishTextFuture: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -27,8 +27,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172972}
   m_LocalRotation: {x: -.70702064, y: -.705345035, z: -.0394259058, w: -.0324929394}
-  m_LocalPosition: {x: 143.179993, y: 1014.78998, z: 286.309998}
-  m_LocalScale: {x: 23.9198856, y: 23.9198799, z: 23.9198799}
+  m_LocalPosition: {x: 175.720001, y: 14.789978, z: 295.640015}
+  m_LocalScale: {x: 23.9198856, y: 23.919878, z: 23.9198818}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,7 +73,7 @@ BoxCollider:
   m_GameObject: {fileID: 172972}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: .0556943491, y: .0599999987, z: .0500000007}
   m_Center: {x: -.0153471753, y: -4.76483393e-07, z: 9.53674316e-07}
@@ -105,12 +105,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3a2dedcc51101f42987effc9438ebb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Glow: {fileID: 0}
+  Normal: {fileID: 0}
   highlightDistance: 10
   player: {fileID: 0}
   picked: 0
-  Glow: {fileID: 0}
-  Normal: {fileID: 0}
-  finishTextPast: {fileID: 0}
+  pickTextPast: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
