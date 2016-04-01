@@ -13,9 +13,9 @@ public class GateScript : MonoBehaviour, IPromptable {
 
     // Use this for initialization
     void Start () {
-		key = GameObject.Find("key");
+		key = GameObject.Find("key2");
 		gatePast = GameObject.Find("TombGatePast");
-		gateFuture = GameObject.Find("TombGateFuture");
+		//gateFuture = GameObject.Find("TombGateFuture");
 	}
 	
 	// Update is called once per frame
@@ -24,8 +24,8 @@ public class GateScript : MonoBehaviour, IPromptable {
 		if(!opening)
 			return;
 
-		gatePast.transform.Translate(0,1 * Time.deltaTime,0);
-		gateFuture.transform.Translate(0,1* Time.deltaTime,0);
+		gatePast.transform.Translate(0, 0, 1 * Time.deltaTime);
+		//gateFuture.transform.Translate(0,1* Time.deltaTime,0);
 
 	}
 
