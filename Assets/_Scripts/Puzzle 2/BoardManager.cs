@@ -12,7 +12,9 @@ public class BoardManager : PickableBase {
 	
 	// Update is called once per frame
 	void Update () {
-        UpdateHighlight();
+        if (!picked) {
+            UpdateHighlight();
+        }
     }
 
     override public IEnumerator ShowText() {
