@@ -5,6 +5,7 @@ public class PatrolState : IEnemyState {
 
     private readonly StatePatternEnemy enemy;
     private int nextWayPoint;
+	public Animator anim = GameObject.Find ("guard4").GetComponent<Animator> ();
 
     private void Awake() {
         nextWayPoint = 0;
@@ -33,6 +34,9 @@ public class PatrolState : IEnemyState {
     public void ToAlertState() {
         enemy.currentState = enemy.alertState;
         enemy.meshRendererFlag.material.color = Color.yellow;
+		anim.SetBool ("Alert",true);
+		anim.SetBool ("Walk",false);
+		anim.SetBool ("Run",false);
         Debug.Log("transitioning from Patrol to Alert");
     }
 
@@ -41,6 +45,7 @@ public class PatrolState : IEnemyState {
     }
 
     private void Look() {
+
         RaycastHit hit;
         if (Physics.Raycast(enemy.eyes.transform.position, enemy.eyes.transform.forward, out hit, enemy.sightRange) && hit.collider.CompareTag("Player")) {
             // enemy.chaseTarget = hit.transform;
@@ -53,6 +58,8 @@ public class PatrolState : IEnemyState {
     private void Patrol() {
         enemy.navMeshAgent.destination = enemy.wayPoints[nextWayPoint].position;
         enemy.navMeshAgent.Resume();
+		//Animator anim = GameObject.Find ("guard4").GetComponent<Animator> ();
+
 
         if (enemy.navMeshAgent.remainingDistance <= enemy.navMeshAgent.stoppingDistance && !enemy.navMeshAgent.pathPending) {
             nextWayPoint = (nextWayPoint + 1) % enemy.wayPoints.Length;

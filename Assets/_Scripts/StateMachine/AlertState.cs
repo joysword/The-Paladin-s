@@ -6,6 +6,7 @@ public class AlertState : IEnemyState {
     private readonly StatePatternEnemy enemy;
     private float chaseTimer;
     private float patrolTimer;
+	public Animator anim = GameObject.Find ("guard4").GetComponent<Animator> ();
 
     public AlertState(StatePatternEnemy statePatternEnemy) {
         enemy = statePatternEnemy;
@@ -41,6 +42,9 @@ public class AlertState : IEnemyState {
     public void ToPatrolState() {
         enemy.currentState = enemy.patrolState;
         enemy.meshRendererFlag.material.color = Color.green;
+		anim.SetBool ("Alert",false);
+		anim.SetBool ("Walk",true);
+		anim.SetBool ("Run",false);
         chaseTimer = 0f;
         patrolTimer = 0f;
     }
@@ -52,6 +56,9 @@ public class AlertState : IEnemyState {
     public void ToChaseState() {
         enemy.currentState = enemy.chaseState;
         enemy.meshRendererFlag.material.color = Color.red;
+		anim.SetBool ("Alert",false);
+		anim.SetBool ("Walk",false);
+		anim.SetBool ("Run",true);
         chaseTimer = 0f;
         patrolTimer = 0f;
     }

@@ -4,6 +4,7 @@ using System.Collections;
 public class ChaseState : IEnemyState {
 
     private readonly StatePatternEnemy enemy;
+	public Animator anim = GameObject.Find ("guard4").GetComponent<Animator> ();
 
     public ChaseState(StatePatternEnemy statePatternEnemy) {
         enemy = statePatternEnemy;
@@ -25,6 +26,9 @@ public class ChaseState : IEnemyState {
     public void ToAlertState() {
         enemy.currentState = enemy.alertState;
         enemy.meshRendererFlag.material.color = Color.yellow;
+		anim.SetBool ("Alert",true);
+		anim.SetBool ("Walk",false);
+		anim.SetBool ("Run",false);
     }
 
     public void ToChaseState() {
@@ -44,6 +48,7 @@ public class ChaseState : IEnemyState {
     }
 
     private void Chase() {
+
         enemy.navMeshAgent.destination = enemy.chaseTarget.position;
 		//enemy.navMeshAgent.speed = 10f;
         enemy.navMeshAgent.Resume();
