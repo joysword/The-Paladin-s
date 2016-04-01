@@ -2,16 +2,18 @@
 using System.Collections;
 
 public class LookAtScript : MonoBehaviour {
-    Transform target;
-    public string targetName = "leader";
+    Transform target = null;
+    public string targetName = "";
 	// Use this for initialization
 	void Start ()
     {
-        target = GameObject.Find(targetName).transform;
+        if(targetName != "")
+            target = GameObject.Find(targetName).transform;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        transform.LookAt(target);
+        if(target != null)
+            transform.LookAt(target);
 	}
 }
