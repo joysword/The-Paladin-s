@@ -360,23 +360,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &184392
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 463488}
-  - 33: {fileID: 3382836}
-  - 65: {fileID: 6579652}
-  m_Layer: 0
-  m_Name: RockBarrierCollider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &189326
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,18 +681,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 497592}
   m_RootOrder: 14
---- !u!4 &463488
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184392}
-  m_LocalRotation: {x: 0, y: -.0531419553, z: 0, w: .998587012}
-  m_LocalPosition: {x: .209999993, y: -1.52999997, z: -6.19000006}
-  m_LocalScale: {x: 4, y: 4, z: 28}
-  m_Children: []
-  m_Father: {fileID: 497592}
-  m_RootOrder: 25
 --- !u!4 &472184
 Transform:
   m_ObjectHideFlags: 1
@@ -805,7 +776,6 @@ Transform:
   - {fileID: 407364}
   - {fileID: 435318}
   - {fileID: 440336}
-  - {fileID: 463488}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &497774
@@ -1615,13 +1585,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 130582}
   m_Mesh: {fileID: 4300000, guid: f3d24065514c0a94dbb8d9d7728b78cb, type: 3}
---- !u!33 &3382836
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184392}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &3382862
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1664,18 +1627,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 130062}
   m_Mesh: {fileID: 4300000, guid: f3d24065514c0a94dbb8d9d7728b78cb, type: 3}
---- !u!65 &6579652
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 184392}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &9500272
 Animator:
   serializedVersion: 3
