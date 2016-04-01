@@ -2757,7 +2757,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd7ef1a1d26f47479f42584f236c8a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finishTextPast: {fileID: 491922154}
+  promptTextPast: {fileID: 0}
+  promptTextFuture: {fileID: 0}
 --- !u!1 &809898739
 GameObject:
   m_ObjectHideFlags: 0
