@@ -31,6 +31,9 @@ public class LeavesPastBBScript : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        if (cam == null)
+            return;
+
         foreach (Transform c in allLeaves)
         {
             c.LookAt(c.transform.position + cam.transform.rotation * Vector3.back,
