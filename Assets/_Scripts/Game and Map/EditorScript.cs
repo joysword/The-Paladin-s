@@ -53,20 +53,18 @@ public class ObjectSetter : EditorWindow
         var map_past = GameObject.Find("map_past");
         var map_future = GameObject.Find("map_future");
 
-        foreach (Transform c in map_past.transform)
+        AddColliders(map_past.transform);
+        AddColliders(map_future.transform);
+    }
+
+    static void AddColliders(Transform o)
+    {
+        foreach (Transform c in o.transform)
         {
-            if(c.GetComponents<MeshCollider>().Length == 0)
+            AddColliders(c);
+
+            if (c.GetComponents<MeshCollider>().Length == 0 && c.GetComponent<MeshRenderer>() != null)
                 c.gameObject.AddComponent<MeshCollider>();
-
-            DestroyImmediate(c.GetComponent<MeshCollider>());
-        }
-
-        foreach (Transform c in map_future.transform)
-        {
-            if (c.GetComponents<MeshCollider>().Length == 0)
-                c.gameObject.AddComponent<MeshCollider>();
-
-            DestroyImmediate(c.GetComponent<MeshCollider>());
         }
     }
 }
