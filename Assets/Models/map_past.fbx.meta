@@ -20,6 +20,14 @@ ModelImporter:
     100024: portal1
     100026: support1
     100028: tomb1
+    100030: map_catacombs_past
+    100032: map_grass_past
+    100034: map_path_past
+    100036: map_rock_past
+    100038: map_support_past
+    100040: map_tomb_past
+    100042: map_water_past
+    100044: map_waterbed_past
     400000: bridge2
     400002: catacombs
     400004: lock1
@@ -35,6 +43,14 @@ ModelImporter:
     400024: portal1
     400026: support1
     400028: tomb1
+    400030: map_catacombs_past
+    400032: map_grass_past
+    400034: map_path_past
+    400036: map_rock_past
+    400038: map_support_past
+    400040: map_tomb_past
+    400042: map_water_past
+    400044: map_waterbed_past
     2300000: bridge2
     2300002: catacombs
     2300004: lock1
@@ -48,6 +64,14 @@ ModelImporter:
     2300020: portal1
     2300022: support1
     2300024: tomb1
+    2300026: map_catacombs_past
+    2300028: map_grass_past
+    2300030: map_path_past
+    2300032: map_rock_past
+    2300034: map_support_past
+    2300036: map_tomb_past
+    2300038: map_water_past
+    2300040: map_waterbed_past
     3300000: bridge2
     3300002: catacombs
     3300004: lock1
@@ -61,6 +85,14 @@ ModelImporter:
     3300020: portal1
     3300022: support1
     3300024: tomb1
+    3300026: map_catacombs_past
+    3300028: map_grass_past
+    3300030: map_path_past
+    3300032: map_rock_past
+    3300034: map_support_past
+    3300036: map_tomb_past
+    3300038: map_water_past
+    3300040: map_waterbed_past
     4300000: map_grass2
     4300002: support1
     4300004: lock2
@@ -74,6 +106,14 @@ ModelImporter:
     4300020: map_rock2_MeshPart1
     4300022: map_rock2_MeshPart2
     4300024: bridge2
+    4300026: map_rock_past
+    4300028: map_path_past
+    4300030: map_grass_past
+    4300032: map_support_past
+    4300034: map_waterbed_past
+    4300036: map_water_past
+    4300038: map_tomb_past
+    4300040: map_catacombs_past
   materials:
     importMaterials: 1
     materialName: 0

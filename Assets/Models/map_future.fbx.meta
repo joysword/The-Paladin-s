@@ -21,6 +21,17 @@ ModelImporter:
     100026: support2
     100028: tomb1.001
     100030: track
+    100032: map_catacombs_future
+    100034: map_grass_future
+    100036: map_rock_future
+    100038: map_rock_future_MeshPart0
+    100040: map_rock_future_MeshPart1
+    100042: map_rock_future_MeshPart2
+    100044: map_support_future
+    100046: map_tomb_future
+    100048: map_track_future
+    100050: map_water_future
+    100052: map_waterbed_future
     400000: bridge1
     400002: catacombs2
     400004: lock1.001
@@ -37,6 +48,17 @@ ModelImporter:
     400026: support2
     400028: tomb1.001
     400030: track
+    400032: map_catacombs_future
+    400034: map_grass_future
+    400036: map_rock_future
+    400038: map_rock_future_MeshPart0
+    400040: map_rock_future_MeshPart1
+    400042: map_rock_future_MeshPart2
+    400044: map_support_future
+    400046: map_tomb_future
+    400048: map_track_future
+    400050: map_water_future
+    400052: map_waterbed_future
     2300000: bridge1
     2300002: catacombs2
     2300004: lock1.001
@@ -51,6 +73,16 @@ ModelImporter:
     2300022: support2
     2300024: tomb1.001
     2300026: track
+    2300028: map_catacombs_future
+    2300030: map_grass_future
+    2300032: map_rock_future_MeshPart0
+    2300034: map_rock_future_MeshPart1
+    2300036: map_rock_future_MeshPart2
+    2300038: map_support_future
+    2300040: map_tomb_future
+    2300042: map_track_future
+    2300044: map_water_future
+    2300046: map_waterbed_future
     3300000: bridge1
     3300002: catacombs2
     3300004: lock1.001
@@ -65,6 +97,16 @@ ModelImporter:
     3300022: support2
     3300024: tomb1.001
     3300026: track
+    3300028: map_catacombs_future
+    3300030: map_grass_future
+    3300032: map_rock_future_MeshPart0
+    3300034: map_rock_future_MeshPart1
+    3300036: map_rock_future_MeshPart2
+    3300038: map_support_future
+    3300040: map_tomb_future
+    3300042: map_track_future
+    3300044: map_water_future
+    3300046: map_waterbed_future
     4300000: map_grass
     4300002: map_rock_MeshPart0
     4300004: map_rock_MeshPart1
@@ -79,6 +121,16 @@ ModelImporter:
     4300022: lock1.001
     4300024: lock2.001
     4300026: support2
+    4300028: map_grass_future
+    4300030: map_rock_future_MeshPart0
+    4300032: map_rock_future_MeshPart1
+    4300034: map_rock_future_MeshPart2
+    4300036: map_waterbed_future
+    4300038: map_track_future
+    4300040: map_catacombs_future
+    4300042: map_tomb_future
+    4300044: map_water_future
+    4300046: map_support_future
   materials:
     importMaterials: 1
     materialName: 0
