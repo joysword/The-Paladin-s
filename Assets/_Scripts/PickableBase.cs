@@ -13,7 +13,9 @@ public abstract class PickableBase: HighlightableBase, IPromptable {
             //GetComponent<BoxCollider>().enabled = false;
             TurnOffHalo();
             picked = true;
+			PlaySound();
             StartCoroutine("ShowText");
+
         }
     }
 
@@ -22,4 +24,6 @@ public abstract class PickableBase: HighlightableBase, IPromptable {
     }
 
     abstract public IEnumerator ShowText();
+	abstract public void PlaySound();
+
 }

@@ -23,4 +23,8 @@ public class BoardManager : PickableBase {
         yield return new WaitForSeconds(3);
         pickTextPast.SetActive(false);
     }
+
+	override public void PlaySound(){
+		//nothing todo for now
+	}
 }
