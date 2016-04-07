@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class NarrowSpotManager : MonoBehaviour, IPromptable {
-
-    GameObject promptTextPast;
+public class NarrowSpotManager : PromptableTriggerBase {
 
     //GameObject board1;
     GameObject board2;
@@ -18,29 +16,23 @@ public class NarrowSpotManager : MonoBehaviour, IPromptable {
         board3 = GameObject.Find("Board3");
     }
 
-    public void OnTriggerEnter(Collider other) {
+    override public void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
-            promptTextPast = GameObject.FindGameObjectWithTag("PlayerTextPast");
             if (board3.GetComponent<BoardManager>().picked) {
-                promptTextPast.GetComponent<TextMesh>().text = "wooden board is put over the canyon";
+                text.GetComponent<TextMesh>().text = "wooden board is put over the canyon";
                 boardOnCanyon.SetActive(true);
                 GetComponent<BoxCollider>().enabled = false;
                 StartCoroutine("ShowText");
             }
             else if (board2.GetComponent<BoardManager>().picked) {
-                promptTextPast.GetComponent<TextMesh>().text = "The wooden board(s) you have are too short";
+                text.GetComponent<TextMesh>().text = "The wooden board(s) you have are too short";
                 StartCoroutine("ShowText");
             }
             else {
-                promptTextPast.GetComponent<TextMesh>().text = defaultText;
+                text.GetComponent<TextMesh>().text = defaultText;
                 StartCoroutine("ShowText");
             }
         }
     }
 
-    public IEnumerator ShowText() {
-        promptTextPast.SetActive(true);
-        yield return new WaitForSeconds(3);
-        promptTextPast.SetActive(false);
-    }
 }

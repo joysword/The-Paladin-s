@@ -1,6 +1,13 @@
 ﻿using UnityEngine;
 
-public abstract class InteractableBase : HighlightableBase {
+abstract public class InteractableBase : HighlightableBase {
 
-    protected abstract void Interact();
+    void Update() {
+        UpdateHighlight();
+        if (Actionable && (Input.GetKeyDown("f") || getReal3D.Input.GetButtonDown("Reset"))) {
+            Interact();
+        }
+    }
+
+    abstract protected void Interact();
 }

@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GateScript : MonoBehaviour, IPromptable {
+public class GateScript : PromptableTriggerBase {
+
+    public GameObject textFuture;
 
 	GameObject gatePast;
 	GameObject gateFuture;
 	GameObject key;
 	bool opening = false;
 
-    public GameObject promptTextPast;
-    public GameObject promptTextFuture;
 	public AudioSource sound;
 
     // Use this for initialization
@@ -38,7 +38,7 @@ public class GateScript : MonoBehaviour, IPromptable {
 		sound.mute = true;
 	}
 
-	public void OnTriggerEnter(Collider other)
+	override public void OnTriggerEnter(Collider other)
 	{
         if (other.CompareTag("Player")) {
             if (key.GetComponent<KeyScript>().picked) {
@@ -52,13 +52,13 @@ public class GateScript : MonoBehaviour, IPromptable {
         }
 	}
 
-    public IEnumerator ShowText() {
-        promptTextPast.GetComponent<TextMesh>().text = "This gate needs a key to open!";
-        promptTextFuture.GetComponent<TextMesh>().text = "This gate needs a key to open!";
-        promptTextPast.SetActive(true);
-        promptTextFuture.SetActive(true);
+    override public IEnumerator ShowText() {
+        text.GetComponent<TextMesh>().text = "This gate needs a key to open!";
+        textFuture.GetComponent<TextMesh>().text = "This gate needs a key to open!";
+        text.SetActive(true);
+        textFuture.SetActive(true);
         yield return new WaitForSeconds(3);
-        promptTextPast.SetActive(false);
-        promptTextFuture.SetActive(false);
+        text.SetActive(false);
+        textFuture.SetActive(false);
     }
 }

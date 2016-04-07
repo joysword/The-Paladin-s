@@ -1,11 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class PickableBase: HighlightableBase, IPromptable {
+abstract public class PickableBase: HighlightableBase, IPromptable {
 
     public bool picked = false;
-    protected GameObject textPast;
-    protected GameObject textFuture;
+    protected GameObject text;
+
+    // Update is called once per frame
+    void Update() {
+        UpdateHighlight();
+        if (Actionable && (Input.GetKeyDown("f") || getReal3D.Input.GetButtonDown("Reset"))) {
+            Pick();
+        }
+    }
+
+    Get
 
     public void OnTriggerEnter(Collider other) {
         if (other.CompareTag("PickTrigger")) {
@@ -24,6 +33,7 @@ public abstract class PickableBase: HighlightableBase, IPromptable {
     }
 
     abstract public IEnumerator ShowText();
+
 	abstract public void PlaySound();
 
 }

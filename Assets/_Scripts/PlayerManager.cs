@@ -15,8 +15,8 @@ public class PlayerManager : MonoBehaviour {
 	    
 	}
 
-    void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Pickable")) {
+    void OnTriggerStay(Collider other) {
+        if (other.CompareTag("Pickable") || other.CompareTag("Interactable")) {
             
         }
     }

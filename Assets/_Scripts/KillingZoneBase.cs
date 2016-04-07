@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class KillingZoneBase : MonoBehaviour {
+abstract public class KillingZoneBase : MonoBehaviour {
 
     protected static GameObject finishTextPast;
     protected static GameObject finishTextFuture;
