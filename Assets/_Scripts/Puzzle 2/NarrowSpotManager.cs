@@ -3,7 +3,8 @@ using System.Collections;
 
 public class NarrowSpotManager : MonoBehaviour, IPromptable {
 
-    public GameObject promptTextPast;
+    GameObject promptTextPast;
+
     //GameObject board1;
     GameObject board2;
     GameObject board3;
@@ -19,10 +20,10 @@ public class NarrowSpotManager : MonoBehaviour, IPromptable {
 
     public void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player")) {
+            promptTextPast = GameObject.FindGameObjectWithTag("PlayerTextPast");
             if (board3.GetComponent<BoardManager>().picked) {
                 promptTextPast.GetComponent<TextMesh>().text = "wooden board is put over the canyon";
                 boardOnCanyon.SetActive(true);
-                Debug.Log("hererereree");
                 GetComponent<BoxCollider>().enabled = false;
                 StartCoroutine("ShowText");
             }
