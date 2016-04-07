@@ -7043,6 +7043,7 @@ GameObject:
   - 65: {fileID: 802810837}
   - 23: {fileID: 802810836}
   - 114: {fileID: 802810839}
+  - 82: {fileID: 802810840}
   m_Layer: 0
   m_Name: GateTrigger
   m_TagString: Untagged
@@ -7120,6 +7121,77 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   promptTextPast: {fileID: 491922154}
   promptTextFuture: {fileID: 817252373}
+  sound: {fileID: 1333238468}
+--- !u!82 &802810840
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 802810834}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 64928abc401cb3748af8dfd6491c0d47, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .209999993
+  m_Pitch: 1
+  Loop: 1
+  Mute: 1
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &806886397
 GameObject:
   m_ObjectHideFlags: 0
@@ -11354,6 +11426,11 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: dc5c3176f624fff4a991e84c8c37f1ad, type: 3}
   m_PrefabInternal: {fileID: 1147284006}
+--- !u!82 &1333238468 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 8231288, guid: a04e2c5757e937a488aad6a6782720a9,
+    type: 2}
+  m_PrefabInternal: {fileID: 37547537}
 --- !u!1 &1339833622
 GameObject:
   m_ObjectHideFlags: 0

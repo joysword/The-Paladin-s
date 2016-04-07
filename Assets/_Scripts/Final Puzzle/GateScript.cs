@@ -10,12 +10,14 @@ public class GateScript : MonoBehaviour, IPromptable {
 
     public GameObject promptTextPast;
     public GameObject promptTextFuture;
+	public AudioSource sound;
 
     // Use this for initialization
     void Start () {
 		key = GameObject.Find("key2");
 		gatePast = GameObject.Find("TombGatePast");
 		gateFuture = GameObject.Find("TombGateFuture");
+		sound = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -26,12 +28,14 @@ public class GateScript : MonoBehaviour, IPromptable {
 
 		gatePast.transform.Translate(0, 0, 1 * Time.deltaTime);
 		gateFuture.transform.Translate(0, 0, 1* Time.deltaTime);
+		sound.mute = false;
 
 	}
 
 	void Stop()
 	{
 		opening = false;
+		sound.mute = true;
 	}
 
 	public void OnTriggerEnter(Collider other)
