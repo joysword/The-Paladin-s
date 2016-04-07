@@ -130,8 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad3082e2f1f2cd646837038026a12ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endingTextPast: {fileID: 491922154}
-  endingTextFuture: {fileID: 817252373}
+  text: {fileID: 491922154}
+  textFuture: {fileID: 817252373}
 --- !u!65 &6598469
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9622,49 +9622,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 36
       objectReference: {fileID: 0}
-    - target: {fileID: 193198, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: m_Name
-      value: Board3
-      objectReference: {fileID: 0}
     - target: {fileID: 11454670, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
       propertyPath: player
       value: 
       objectReference: {fileID: 395067917}
-    - target: {fileID: 11454670, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: pickTextPast
-      value: 
-      objectReference: {fileID: 491922154}
-    - target: {fileID: 477282, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 6573454, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: m_Size.y
-      value: .0417611822
-      objectReference: {fileID: 0}
-    - target: {fileID: 6573454, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: m_Center.x
-      value: .00852758531
-      objectReference: {fileID: 0}
-    - target: {fileID: 6573454, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: m_Center.y
-      value: .000657351979
-      objectReference: {fileID: 0}
-    - target: {fileID: 6573454, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: m_Center.z
-      value: .00872784853
-      objectReference: {fileID: 0}
-    - target: {fileID: 6573454, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: m_Size.x
-      value: .0764811188
-      objectReference: {fileID: 0}
-    - target: {fileID: 6573454, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: m_Size.z
-      value: .0183213502
-      objectReference: {fileID: 0}
-    - target: {fileID: 11454670, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: highlightDistance
-      value: 15
+    - target: {fileID: 193198, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
+      propertyPath: m_Name
+      value: Board3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
@@ -10460,25 +10424,9 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 395067917}
-    - target: {fileID: 11454670, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: pickTextPast
-      value: 
-      objectReference: {fileID: 491922154}
     - target: {fileID: 193198, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
       propertyPath: m_Name
       value: Board1
-      objectReference: {fileID: 0}
-    - target: {fileID: 477282, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 11454670, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: highlightDistance
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 12260854, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: m_Color.rgba
-      value: 4287203839
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
@@ -17430,7 +17378,7 @@ MonoBehaviour:
   Glow: {fileID: 0}
   Normal: {fileID: 0}
   highlightDistance: 10
-  player: {fileID: 0}
+  player: {fileID: 395067917}
   gatePast: {fileID: 862020779}
   gateFuture: {fileID: 317574414}
   isPulled: 0
@@ -17518,41 +17466,9 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 395067917}
-    - target: {fileID: 11454670, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: pickTextPast
-      value: 
-      objectReference: {fileID: 491922154}
     - target: {fileID: 193198, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
       propertyPath: m_Name
       value: Board2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6573454, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: m_Size.y
-      value: .0158661846
-      objectReference: {fileID: 0}
-    - target: {fileID: 6573454, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: m_Size.z
-      value: .0132522834
-      objectReference: {fileID: 0}
-    - target: {fileID: 6573454, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: m_Center.x
-      value: -.00201161718
-      objectReference: {fileID: 0}
-    - target: {fileID: 6573454, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: m_Center.y
-      value: -.00139899971
-      objectReference: {fileID: 0}
-    - target: {fileID: 6573454, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: m_Center.z
-      value: .00204840396
-      objectReference: {fileID: 0}
-    - target: {fileID: 6573454, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: m_Size.x
-      value: .0781867206
-      objectReference: {fileID: 0}
-    - target: {fileID: 11454670, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
-      propertyPath: highlightDistance
-      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}

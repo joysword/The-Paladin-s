@@ -18,6 +18,6 @@ public class BoardManager : PickableBase {
 	}
 
     public override void Pick() {
-        Debug.Log("pick");
+        PlaySound();
     }
 }

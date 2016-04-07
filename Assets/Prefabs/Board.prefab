@@ -26,9 +26,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193198}
-  m_LocalRotation: {x: .623376191, y: 0, z: 0, w: .781922042}
-  m_LocalPosition: {x: -201.800003, y: -43.5859985, z: -235.783005}
-  m_LocalScale: {x: 30, y: 100, z: 100}
+  m_LocalRotation: {x: .701851785, y: -.0860455781, z: .086045526, w: -.701852143}
+  m_LocalPosition: {x: -204.550003, y: -43.5499992, z: -252.720001}
+  m_LocalScale: {x: 60, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,8 +75,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .0594136529, y: .0142750936, z: .00913927238}
-  m_Center: {x: -1.38856949e-05, y: -.000626217865, z: .00415313663}
+  m_Size: {x: .0764811188, y: .0417611822, z: .0183213502}
+  m_Center: {x: .00852758531, y: .000657351979, z: .00872784853}
 --- !u!114 &11454670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,10 +90,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Glow: {fileID: 0}
   Normal: {fileID: 0}
-  highlightDistance: 10
+  highlightDistance: 15
   player: {fileID: 0}
   picked: 0
-  pickTextPast: {fileID: 0}
+  pickText: {fileID: 0}
 --- !u!122 &12260854
 Halo:
   m_ObjectHideFlags: 1

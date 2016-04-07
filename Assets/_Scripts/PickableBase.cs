@@ -3,6 +3,7 @@ using System.Collections;
 
 abstract public class PickableBase : HighlightableBase, IPromptable {
 
+    [HideInInspector]
     public bool picked = false;
     protected GameObject text;
 

@@ -28,6 +28,6 @@ public class KeyScript : PickableBase {
     }
 
     public override void Pick() {
-        Debug.Log("pick");
+        PlaySound();
     }
 }
