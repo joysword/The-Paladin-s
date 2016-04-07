@@ -1,21 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class BoardManager : PickableBase {
 
     public GameObject pickText;
-
-    // Use this for initialization
-    void Start() {
-
-    }
-	
-	// Update is called once per frame
-	void Update () {
-        if (!picked) {
-            UpdateHighlight();
-        }
-    }
 
     override public IEnumerator ShowText() {
         pickText.GetComponent<TextMesh>().text = "wooden board acquired!";
@@ -27,4 +16,8 @@ public class BoardManager : PickableBase {
 	override public void PlaySound(){
 		//nothing todo for now
 	}
+
+    public override void Pick() {
+        Debug.Log("pick");
+    }
 }

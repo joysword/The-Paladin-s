@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 [RequireComponent(typeof(AudioSource))]
 public class KeyScript : PickableBase {
@@ -15,7 +16,7 @@ public class KeyScript : PickableBase {
     }
 
 	override public void PlaySound() {
-		audio.PlayOneShot (ping,0.2f);
+		audio.PlayOneShot (ping, 0.2f);
 		//Debug.Log ("Key Sound Played!");
 	}
 
@@ -24,6 +25,9 @@ public class KeyScript : PickableBase {
         pickTextPast.SetActive(true);
         yield return new WaitForSeconds(3);
         pickTextPast.SetActive(false);
-		Debug.Log ("Key Acquired!");
+    }
+
+    public override void Pick() {
+        Debug.Log("pick");
     }
 }

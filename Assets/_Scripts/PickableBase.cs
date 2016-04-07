@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-abstract public class PickableBase: HighlightableBase, IPromptable {
+abstract public class PickableBase : HighlightableBase, IPromptable {
 
     public bool picked = false;
     protected GameObject text;
@@ -14,7 +14,7 @@ abstract public class PickableBase: HighlightableBase, IPromptable {
         }
     }
 
-    Get
+    abstract public void Pick();
 
     public void OnTriggerEnter(Collider other) {
         if (other.CompareTag("PickTrigger")) {
@@ -26,10 +26,6 @@ abstract public class PickableBase: HighlightableBase, IPromptable {
             StartCoroutine("ShowText");
 
         }
-    }
-
-    public void ShowHint() {
-        
     }
 
     abstract public IEnumerator ShowText();
