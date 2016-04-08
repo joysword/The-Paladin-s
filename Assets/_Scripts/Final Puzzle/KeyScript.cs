@@ -13,7 +13,7 @@ public class KeyScript : PickableBase {
     }
 
 	override public void PlaySound() {
-		audio.PlayOneShot (ping, 0.2f);
+		audio.PlayOneShot (ping, 0.7f);
 		//Debug.Log ("Key Sound Played!");
 	}
 
