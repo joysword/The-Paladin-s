@@ -7,6 +7,8 @@ public class KeyScript : PickableBase {
 	public AudioClip ping;
 	AudioSource audioSource;
 
+    static public int keyCount = 0;
+
     // Use this for initialization
     void Start() {
         audioSource = GetComponent<AudioSource>();

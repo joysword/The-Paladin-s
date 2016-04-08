@@ -41,7 +41,7 @@ public class GateScript : PromptableTriggerBase {
 	override public void OnTriggerEnter(Collider other)
 	{
         if (other.CompareTag("Player")) {
-            if (key.GetComponent<KeyScript>().keyCount == 2) {
+            if (KeyScript.keyCount == 2) {
                 GetComponent<BoxCollider>().enabled = false;
                 opening = true;
                 Invoke("Stop", 5);
@@ -53,8 +53,8 @@ public class GateScript : PromptableTriggerBase {
 	}
 
     override public IEnumerator ShowText() {
-        text.GetComponent<TextMesh>().text = "This gate needs a key to open!";
-        textFuture.GetComponent<TextMesh>().text = "This gate needs a key to open!";
+        text.GetComponent<TextMesh>().text = "This gate needs two keys to open!";
+        textFuture.GetComponent<TextMesh>().text = "This gate needs two keys to open!";
         text.SetActive(true);
         textFuture.SetActive(true);
         yield return new WaitForSeconds(3);

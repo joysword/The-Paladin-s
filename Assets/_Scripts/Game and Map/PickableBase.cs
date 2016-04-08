@@ -4,7 +4,6 @@ using System.Collections;
 abstract public class PickableBase : HighlightableBase, IPromptable {
 
     [HideInInspector]
-    public int keyCount = 0;
     public bool picked = false;
     public GameObject text;
 
@@ -12,7 +11,7 @@ abstract public class PickableBase : HighlightableBase, IPromptable {
 
     // Update is called once per frame
     void Update() {
-        if (Actionable) {
+        if (!picked) {
             UpdateHighlight();
             if (Actionable && (Input.GetKeyDown("f") || getReal3D.Input.GetButtonDown("Reset"))) {
                 Pick();
