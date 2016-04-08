@@ -13,8 +13,7 @@ TagManager:
   - Guard
   - PlayerTextPast
   - PlayerTextFuture
-  - FinishTextFuture
-  - FinishTextPast
+  - ActionTrigger
   layers:
   - Default
   - TransparentFX
