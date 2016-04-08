@@ -211,7 +211,8 @@ Prefab:
       propertyPath: m_Text
       value: "There is darkness in the world; its clutches have snaked their way into
         the kingdom of Allthea.\r\nWith it came the fall of our King.\r \r\nTrapped
-        in an eternal slumber, the Kingdom has lost its light."
+        in an eternal slumber, the Kingdom has lost its light.\n\nPress O (circle)
+        to continue..."
       objectReference: {fileID: 0}
     - target: {fileID: 10213844, guid: 0664bfde9563e9040b4758a8939f98af, type: 2}
       propertyPath: m_Color.rgba
@@ -229,7 +230,8 @@ Prefab:
       propertyPath: m_Text
       value: "You are the glorious Paladin, the King\u2019s faithful knight.\r\nYou
         are Allthea\u2019s final hope for redemption.\r\nLet your memories ground
-        you and in turn aid you,\nwhen you set out on your greatest quest."
+        you and in turn aid you,\nwhen you set out on your greatest quest.\n\nPress
+        O (circle) to continue..."
       objectReference: {fileID: 0}
     - target: {fileID: 197690, guid: 0664bfde9563e9040b4758a8939f98af, type: 2}
       propertyPath: m_IsActive
@@ -244,7 +246,7 @@ Prefab:
       value: "Your memory is your weapon as well as ally.\r\nTraverse the world of
         our future to free the past of the darkness.\n\nUse wand stick to move and
         turn, use O (circle) to interact.\nAfter you finish a puzzle, use X (cross)
-        to teletransport to the next"
+        to teletransport to the next.\n\nPress O (circle) to start the advanture!"
       objectReference: {fileID: 0}
     - target: {fileID: 403582, guid: 0664bfde9563e9040b4758a8939f98af, type: 2}
       propertyPath: m_LocalPosition.y
