@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3341644}
   - 23: {fileID: 2370736}
   - 95: {fileID: 9561294}
+  - 136: {fileID: 13677434}
   m_Layer: 0
   m_Name: rock_gate
   m_TagString: Untagged
@@ -24,9 +25,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198752}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 78.90436, y: 78.90436, z: 78.90436}
+  m_LocalRotation: {x: -.686461449, y: .169619307, z: .169619277, w: .686461449}
+  m_LocalPosition: {x: 5.63999939, y: .442993164, z: -13.7799988}
+  m_LocalScale: {x: 252.408081, y: 197.551636, z: 197.55162}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -51,7 +52,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -80,6 +81,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!136 &13677434
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198752}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .03001648
+  m_Height: .105901711
+  m_Direction: 2
+  m_Center: {x: .00114350673, y: .00168925896, z: .00999999978}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

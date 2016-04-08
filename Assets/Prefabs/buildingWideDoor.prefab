@@ -12,6 +12,7 @@ GameObject:
   - 23: {fileID: 2329244}
   - 95: {fileID: 9511952}
   - 64: {fileID: 6494944}
+  - 64: {fileID: 6414082}
   m_Layer: 0
   m_Name: buildingWideDoor
   m_TagString: Untagged
@@ -25,8 +26,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183460}
-  m_LocalRotation: {x: -.585690498, y: .396190256, z: .396190286, w: .585690379}
-  m_LocalPosition: {x: 19.5900002, y: 5.92000008, z: -7.57000017}
+  m_LocalRotation: {x: -.623918772, y: .332754314, z: .332754374, w: .623918653}
+  m_LocalPosition: {x: 5.44000244, y: .320014954, z: -13.25}
   m_LocalScale: {x: 259.419556, y: 80.7680206, z: 379.846252}
   m_Children: []
   m_Father: {fileID: 0}
@@ -37,7 +38,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183460}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -63,6 +64,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183460}
+  m_Mesh: {fileID: 4300000, guid: c1374217aa604224eb0bca1c6155d78c, type: 3}
+--- !u!64 &6414082
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183460}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: c1374217aa604224eb0bca1c6155d78c, type: 3}
 --- !u!64 &6494944
 MeshCollider:
