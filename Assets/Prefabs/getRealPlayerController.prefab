@@ -38,7 +38,7 @@ GameObject:
   - 102: {fileID: 10214894}
   m_Layer: 5
   m_Name: Text
-  m_TagString: FinishTextPast
+  m_TagString: PlayerTextPast
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,8 +150,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125136}
-  m_LocalRotation: {x: 0, y: .37258181, z: 0, w: -.927999377}
-  m_LocalPosition: {x: 174.800003, y: 13.3500004, z: 230}
+  m_LocalRotation: {x: 0, y: .468648285, z: 0, w: .883384883}
+  m_LocalPosition: {x: -185.624435, y: -38.7250366, z: -126.815048}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 463542}
@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e256e1d555cc25e418af491fd9328db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TranslationSpeed: .600000024
+  TranslationSpeed: .800000012
   forwardAxis: Forward
   strafeAxis: Strafe
   navSpeedButton: NavSpeed
@@ -589,7 +589,7 @@ MonoBehaviour:
   yawAxis: Yaw
   pitchAxis: Pitch
   resetButton: 
-  RotationSpeed: 60
+  RotationSpeed: 120
   rotationAround: 1
   rotationAroundReference: {fileID: 0}
   rotationFollows: 0

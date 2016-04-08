@@ -5519,18 +5519,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 24
       objectReference: {fileID: 0}
-    - target: {fileID: 137010, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 137010, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
-      propertyPath: m_TagString
-      value: PlayerTextPast
-      objectReference: {fileID: 0}
-    - target: {fileID: 125136, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
   m_IsPrefabParent: 0
@@ -19423,7 +19411,7 @@ MonoBehaviour:
   yawAxis: Yaw
   pitchAxis: Pitch
   resetButton: 
-  RotationSpeed: 60
+  RotationSpeed: 120
   rotationAround: 1
   rotationAroundReference: {fileID: 0}
   rotationFollows: 0
@@ -19440,7 +19428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e256e1d555cc25e418af491fd9328db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TranslationSpeed: .600000024
+  TranslationSpeed: .800000012
   forwardAxis: Forward
   strafeAxis: Strafe
   navSpeedButton: NavSpeed
