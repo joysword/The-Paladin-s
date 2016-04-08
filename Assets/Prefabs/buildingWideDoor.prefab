@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3333096}
   - 23: {fileID: 2329244}
   - 95: {fileID: 9511952}
+  - 64: {fileID: 6494944}
   m_Layer: 0
   m_Name: buildingWideDoor
   m_TagString: Untagged
@@ -24,9 +25,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183460}
-  m_LocalRotation: {x: -.559722126, y: -.432100892, z: -.432100773, w: .559722126}
-  m_LocalPosition: {x: -4.15462494, y: 15.6099997, z: .910000026}
-  m_LocalScale: {x: 71.4027252, y: 71.4026871, z: 71.4026871}
+  m_LocalRotation: {x: -.585690498, y: .396190256, z: .396190286, w: .585690379}
+  m_LocalPosition: {x: 19.5900002, y: 5.92000008, z: -7.57000017}
+  m_LocalScale: {x: 259.419556, y: 80.7680206, z: 379.846252}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -62,6 +63,18 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183460}
+  m_Mesh: {fileID: 4300000, guid: c1374217aa604224eb0bca1c6155d78c, type: 3}
+--- !u!64 &6494944
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183460}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: c1374217aa604224eb0bca1c6155d78c, type: 3}
 --- !u!95 &9511952
 Animator:

@@ -11,9 +11,11 @@ abstract public class PickableBase : HighlightableBase, IPromptable {
 
     // Update is called once per frame
     void Update() {
-        UpdateHighlight();
-        if (Actionable && (Input.GetKeyDown("f") || getReal3D.Input.GetButtonDown("Reset"))) {
-            Pick();
+        if (Actionable) {
+            UpdateHighlight();
+            if (Actionable && (Input.GetKeyDown("f") || getReal3D.Input.GetButtonDown("Reset"))) {
+                Pick();
+            }
         }
     }
 

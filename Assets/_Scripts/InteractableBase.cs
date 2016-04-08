@@ -9,9 +9,11 @@ abstract public class InteractableBase : HighlightableBase {
     }
 
     void Update() {
-        UpdateHighlight();
-        if (Actionable && (Input.GetKeyDown("f") || getReal3D.Input.GetButtonDown("Reset"))) {
-            Interact();
+        if (Actionable) {
+            UpdateHighlight();
+            if (Input.GetKeyDown("f") || getReal3D.Input.GetButtonDown("Reset")) {
+                Interact();
+            }
         }
     }
 
