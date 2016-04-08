@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class AxeTriggerScript : MonoBehaviour {
-
+    public GameObject axePivot;
 	// Use this for initialization
 	void Start () {
 	
@@ -16,7 +16,8 @@ public class AxeTriggerScript : MonoBehaviour {
 	void OnTriggerEnter(Collider other)
 	{
         if (other.CompareTag("Player")) {
-            GameObject.Find("AxePivot").GetComponent<AxeSwing>().Activate();
+
+            axePivot.GetComponent<AxeSwing>().Activate();
             Destroy(this);
         }
 	}

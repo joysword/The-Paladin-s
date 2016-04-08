@@ -4,6 +4,7 @@ using System.Collections;
 abstract public class PickableBase : HighlightableBase, IPromptable {
 
     [HideInInspector]
+    public int keyCount = 0;
     public bool picked = false;
     public GameObject text;
 
@@ -19,7 +20,7 @@ abstract public class PickableBase : HighlightableBase, IPromptable {
         }
     }
 
-    void Pick() {
+    public virtual void Pick() {
         GetComponent<Renderer>().enabled = false;
         GetComponent<BoxCollider>().enabled = false;
         TurnOffHalo();

@@ -41,7 +41,7 @@ public class GateScript : PromptableTriggerBase {
 	override public void OnTriggerEnter(Collider other)
 	{
         if (other.CompareTag("Player")) {
-            if (key.GetComponent<KeyScript>().picked) {
+            if (key.GetComponent<KeyScript>().keyCount == 2) {
                 GetComponent<BoxCollider>().enabled = false;
                 opening = true;
                 Invoke("Stop", 5);

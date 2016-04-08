@@ -5,15 +5,15 @@ using System;
 [RequireComponent(typeof(AudioSource))]
 public class KeyScript : PickableBase {
 	public AudioClip ping;
-	AudioSource audio;
+	AudioSource audioSource;
 
     // Use this for initialization
     void Start() {
-		audio = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
 	override public void PlaySound() {
-		audio.PlayOneShot (ping, 0.7f);
+        audioSource.PlayOneShot (ping, 0.7f);
 		//Debug.Log ("Key Sound Played!");
 	}
 
@@ -22,5 +22,11 @@ public class KeyScript : PickableBase {
         text.SetActive(true);
         yield return new WaitForSeconds(3);
         text.SetActive(false);
+    }
+
+    public override void Pick()
+    {
+        base.Pick();
+        keyCount++;
     }
 }
