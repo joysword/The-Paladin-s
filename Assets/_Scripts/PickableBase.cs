@@ -39,6 +39,7 @@ abstract public class PickableBase : HighlightableBase, IPromptable {
     public void OnTriggerExit(Collider other) {
         if (other.CompareTag("ActionTrigger")) {
             Actionable = false;
+            text.SetActive(false);
         }
     }
 

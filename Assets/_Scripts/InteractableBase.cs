@@ -5,6 +5,9 @@ abstract public class InteractableBase : HighlightableBase {
     const string _str = "Press O (circle) to interact";
     public GameObject text;
 
+    void Start() {
+    }
+
     void Update() {
         UpdateHighlight();
         if (Actionable && (Input.GetKeyDown("f") || getReal3D.Input.GetButtonDown("Reset"))) {
@@ -19,5 +22,13 @@ abstract public class InteractableBase : HighlightableBase {
             text.SetActive(true);
         }
     }
+
+    public void OnTriggerExit(Collider other) {
+        if (other.CompareTag("ActionTrigger")) {
+            Actionable = false;
+            text.SetActive(false);
+        }
+    }
+
     abstract protected void Interact();
 }
