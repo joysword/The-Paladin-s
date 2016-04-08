@@ -4,20 +4,14 @@ using System;
 
 public class BoardManager : PickableBase {
 
-    public GameObject pickText;
-
     override public IEnumerator ShowText() {
-        pickText.GetComponent<TextMesh>().text = "wooden board acquired!";
-        pickText.SetActive(true);
+        text.GetComponent<TextMesh>().text = "wooden board acquired!";
+        text.SetActive(true);
         yield return new WaitForSeconds(3);
-        pickText.SetActive(false);
+        text.SetActive(false);
     }
 
 	override public void PlaySound(){
 		//nothing todo for now
 	}
-
-    public override void Pick() {
-        PlaySound();
-    }
 }

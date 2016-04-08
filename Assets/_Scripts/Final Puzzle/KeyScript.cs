@@ -7,9 +7,6 @@ public class KeyScript : PickableBase {
 	public AudioClip ping;
 	AudioSource audio;
 
-    public GameObject pickTextPast;
-    // public GameObject finishTextFuture;
-
     // Use this for initialization
     void Start() {
 		audio = GetComponent<AudioSource>();
@@ -21,13 +18,9 @@ public class KeyScript : PickableBase {
 	}
 
     override public IEnumerator ShowText() {
-        pickTextPast.GetComponent<TextMesh>().text = "key acquired!";
-        pickTextPast.SetActive(true);
+        text.GetComponent<TextMesh>().text = "key acquired!";
+        text.SetActive(true);
         yield return new WaitForSeconds(3);
-        pickTextPast.SetActive(false);
-    }
-
-    public override void Pick() {
-        PlaySound();
+        text.SetActive(false);
     }
 }

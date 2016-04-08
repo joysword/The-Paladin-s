@@ -327,6 +327,7 @@ MonoBehaviour:
   Normal: {fileID: 0}
   highlightDistance: 10
   player: {fileID: 0}
+  text: {fileID: 0}
   trapDown: 0
 --- !u!122 &12286494
 Halo:

@@ -93,7 +93,7 @@ MonoBehaviour:
   highlightDistance: 15
   player: {fileID: 0}
   picked: 0
-  pickText: {fileID: 0}
+  text: {fileID: 0}
 --- !u!122 &12260854
 Halo:
   m_ObjectHideFlags: 1

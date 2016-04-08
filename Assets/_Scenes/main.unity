@@ -4971,6 +4971,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 23
       objectReference: {fileID: 0}
+    - target: {fileID: 11408280, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11448280, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
+      propertyPath: navFollows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d07a3cee9f2774b1a89e611aca919eca, type: 2}
   m_IsPrefabParent: 0
@@ -9626,6 +9634,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 395067917}
+    - target: {fileID: 11454670, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 491922154}
     - target: {fileID: 193198, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
       propertyPath: m_Name
       value: Board3
@@ -10424,6 +10436,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 395067917}
+    - target: {fileID: 11454670, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 491922154}
     - target: {fileID: 193198, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
       propertyPath: m_Name
       value: Board1
@@ -11238,8 +11254,8 @@ MonoBehaviour:
   highlightDistance: 20
   player: {fileID: 395067917}
   picked: 0
+  text: {fileID: 491922154}
   ping: {fileID: 8300000, guid: 3d709bbf5eb640849b11e2970a2d389b, type: 3}
-  pickTextPast: {fileID: 491922154}
 --- !u!65 &1298199886
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13890,6 +13906,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 395067917}
+    - target: {fileID: 11410432, guid: 2a03e90ca99d1b5489ea59085d3a04e3, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 491922154}
     - target: {fileID: 138876, guid: 2a03e90ca99d1b5489ea59085d3a04e3, type: 2}
       propertyPath: m_Name
       value: trap_door_lever
@@ -14879,7 +14899,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1681457760
 Transform:
   m_ObjectHideFlags: 0
@@ -17379,6 +17399,7 @@ MonoBehaviour:
   Normal: {fileID: 0}
   highlightDistance: 10
   player: {fileID: 395067917}
+  text: {fileID: 491922154}
   gatePast: {fileID: 862020779}
   gateFuture: {fileID: 317574414}
   isPulled: 0
@@ -17466,6 +17487,10 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 395067917}
+    - target: {fileID: 11454670, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 491922154}
     - target: {fileID: 193198, guid: 532a596bf9b3ad84d92546c802cf0467, type: 2}
       propertyPath: m_Name
       value: Board2
