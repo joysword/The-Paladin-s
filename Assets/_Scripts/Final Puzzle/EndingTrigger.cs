@@ -11,7 +11,7 @@ public class EndingTrigger : PromptableTriggerBase {
         }
     }
 
-    public IEnumerator ShowText() {
+    override public IEnumerator ShowText() {
         text.GetComponent<TextMesh>().text = "You: Finally, I found you, my King.\nAllthea will be freed and you will rule again";
         textFuture.GetComponent<TextMesh>().text = "You: Finally, I found you, my King.\nAllthea will be freed and you will rule again";
         text.SetActive(true);
