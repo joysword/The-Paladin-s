@@ -242,7 +242,9 @@ Prefab:
     - target: {fileID: 10299802, guid: 0664bfde9563e9040b4758a8939f98af, type: 2}
       propertyPath: m_Text
       value: "Your memory is your weapon as well as ally.\r\nTraverse the world of
-        our future to free the past of the darkness."
+        our future to free the past of the darkness.\n\nUse wand stick to move and
+        turn, use O (circle) to interact.\nAfter you finish a puzzle, use X (cross)
+        to teletransport to the next"
       objectReference: {fileID: 0}
     - target: {fileID: 403582, guid: 0664bfde9563e9040b4758a8939f98af, type: 2}
       propertyPath: m_LocalPosition.y
