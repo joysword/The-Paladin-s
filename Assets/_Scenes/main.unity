@@ -2216,7 +2216,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1983415408}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!23 &148292734
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4781,7 +4781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37814beac6987cb4e97c7292649921b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  promptTextPast: {fileID: 491922154}
+  text: {fileID: 491922154}
   boardOnCanyon: {fileID: 1247805724}
 --- !u!1 &475541913 stripped
 GameObject:
@@ -6388,35 +6388,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a189418b7fe65f4683bd97fa327fa14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finishTextPast: {fileID: 0}
-  finishTextFuture: {fileID: 0}
---- !u!1 &658365669
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 658365670}
-  m_Layer: 0
-  m_Name: Camera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &658365670
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 658365669}
-  m_LocalRotation: {x: .210611358, y: .905240119, z: -.0892816857, w: -.358066946}
-  m_LocalPosition: {x: -.074811317, y: .0534366518, z: .0650763959}
-  m_LocalScale: {x: 1, y: .99999994, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1983415408}
-  m_RootOrder: 0
 --- !u!1 &674266444
 GameObject:
   m_ObjectHideFlags: 0
@@ -7119,8 +7090,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cd7ef1a1d26f47479f42584f236c8a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  promptTextPast: {fileID: 491922154}
-  promptTextFuture: {fileID: 817252373}
+  text: {fileID: 491922154}
+  textFuture: {fileID: 817252373}
   sound: {fileID: 1333238468}
 --- !u!82 &802810840
 AudioSource:
@@ -7252,7 +7223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02e6e6fd13ef6df418679249725d1e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  promptTextPast: {fileID: 491922154}
+  text: {fileID: 491922154}
 --- !u!1 &809898739
 GameObject:
   m_ObjectHideFlags: 0
@@ -7548,7 +7519,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1983415408}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!23 &842780004
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15465,7 +15436,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1983415408}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!23 &1760266620
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17421,6 +17392,7 @@ GameObject:
   - 95: {fileID: 1983415411}
   - 65: {fileID: 1983415410}
   - 114: {fileID: 1983415409}
+  - 122: {fileID: 1983415412}
   m_Layer: 0
   m_Name: wooden_lever
   m_TagString: Untagged
@@ -17438,7 +17410,6 @@ Transform:
   m_LocalPosition: {x: 1.57000005, y: -6.44000006, z: -26.4599991}
   m_LocalScale: {x: 101.015991, y: 101.016144, z: 101.016144}
   m_Children:
-  - {fileID: 658365670}
   - {fileID: 1760266619}
   - {fileID: 2131650729}
   - {fileID: 842780003}
@@ -17456,6 +17427,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cac684086715d340a9bc7a96c7a4320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Glow: {fileID: 0}
+  Normal: {fileID: 0}
+  highlightDistance: 10
+  player: {fileID: 0}
   gatePast: {fileID: 862020779}
   gateFuture: {fileID: 317574414}
   isPulled: 0
@@ -17489,6 +17464,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!122 &1983415412
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1983415407}
+  m_Enabled: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4287203839
+  m_Size: 1
 --- !u!1001 &1989489311
 Prefab:
   m_ObjectHideFlags: 0
@@ -18834,7 +18820,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1983415408}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!23 &2131650730
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -14,11 +14,6 @@ public class KeyScript : PickableBase {
 		audio = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update() {
-        UpdateHighlight();
-    }
-
 	override public void PlaySound() {
 		audio.PlayOneShot (ping,0.2f);
 		//Debug.Log ("Key Sound Played!");

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LeverManager : MonoBehaviour {
+public class LeverManager : InteractableBase {
 
     public GameObject gatePast;
 	public GameObject gateFuture;
@@ -11,27 +11,21 @@ public class LeverManager : MonoBehaviour {
 	void Start () {
 	
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (Input.GetKeyDown("f") || getReal3D.Input.GetButtonDown("Reset")) {
-			if (isPulled == false) {
-            	//this.gameObject.transform.Rotate(-60, 0, 0);
-				var handle = GameObject.Find("wooden_lever");
-				handle.transform.Rotate(0,-180,0);
-				//handle.transform.Translate(-1,0,0);
-				//handle.transform.position = new Vector3(-1.0f,0.0f,0.0f);
 
-
-            	isPulled = true;
-				OpenGate();
-			}
+    override protected void Interact() {
+        if (isPulled == false) {
+            //var handle = GameObject.Find("wooden_lever");
+            transform.Rotate(0, -180, 0);
+            //handle.transform.Translate(-1,0,0);
+            //handle.transform.position = new Vector3(-1.0f,0.0f,0.0f);
+            isPulled = true;
+            OpenGate();
         }
-	}
+    }
 
-	public void OpenGate() {
+    public void OpenGate() {
 		gatePast.transform.Translate(0, 0, 14);
-		gateFuture.transform.Translate (0,0,14);
+		gateFuture.transform.Translate(0, 0, 14);
 		StartCoroutine("Close");
 	}
 
@@ -47,10 +41,9 @@ public class LeverManager : MonoBehaviour {
 	public void Reset() {
 		if (isPulled) {
 			//this.gameObject.transform.Rotate (60,0,0);
-			var handle = GameObject.Find("wooden_lever");
-			handle.transform.Rotate(0,180,0);
+			//var handle = GameObject.Find("wooden_lever");
+			transform.Rotate(0, 180, 0);
 		}
-
 		isPulled = false;
 	}
 }

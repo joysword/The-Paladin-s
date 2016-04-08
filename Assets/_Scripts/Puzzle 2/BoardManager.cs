@@ -3,7 +3,7 @@ using System.Collections;
 
 public class BoardManager : PickableBase {
 
-    public GameObject pickTextPast;
+    public GameObject pickText;
 
     // Use this for initialization
     void Start() {
@@ -18,10 +18,10 @@ public class BoardManager : PickableBase {
     }
 
     override public IEnumerator ShowText() {
-        pickTextPast.GetComponent<TextMesh>().text = "wooden board acquired!";
-        pickTextPast.SetActive(true);
+        pickText.GetComponent<TextMesh>().text = "wooden board acquired!";
+        pickText.SetActive(true);
         yield return new WaitForSeconds(3);
-        pickTextPast.SetActive(false);
+        pickText.SetActive(false);
     }
 
 	override public void PlaySound(){
