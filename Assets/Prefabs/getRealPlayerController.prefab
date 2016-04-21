@@ -408,7 +408,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168252}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 766f8c38e659465468545de77f006a60, type: 3}
   m_Name: 
@@ -561,7 +561,7 @@ MonoBehaviour:
   navSpeedButton: NavSpeed
   resetButton: Reset
   jumpButton: Jump
-  navFollows: 1
+  navFollows: 2
   navReference: {fileID: 454894}
 --- !u!114 &11451258
 MonoBehaviour:
