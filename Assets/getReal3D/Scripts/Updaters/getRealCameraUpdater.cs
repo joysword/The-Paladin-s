@@ -1,4 +1,4 @@
-   using UnityEngine;
+using UnityEngine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using Microsoft.Win32.SafeHandles;
 using getReal3D;
 
 [RequireComponent(typeof(Camera))]
-[AddComponentMenu("getReal3D/Updater/Camera Updater - Past")]
+[AddComponentMenu("getReal3D/Updater/Camera Updater")]
 
 public class getRealCameraUpdater
     : MonoBehaviour {
@@ -35,8 +35,7 @@ public class getRealCameraUpdater
     public string computerName = string.Empty;
     public int nodeID;
 
-    void Awake()
-    {
+    void Awake() {
         m_transform = transform;
         m_camera = GetComponent<Camera>();
         m_pluginInitialized = getReal3D.Input.Init();
