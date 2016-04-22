@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: ed0f5486114327f44a6eb89cc320b4d8
 timeCreated: 1461338764
+=======
+guid: 4a4718593b60f3942853de4766bd6632
+timeCreated: 1457395404
+>>>>>>> parent of 81b3463... upgraded to new version of getReal3D
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
