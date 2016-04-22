@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public class TrainScript : MonoBehaviour {
     Vector3 resetPos;
-    float velocity = -35;
+    float velocity = -60;
     AudioSource horn;
 	// Use this for initialization
 	void Start () {
@@ -16,7 +16,7 @@ public class TrainScript : MonoBehaviour {
     {
         transform.Translate(velocity * Time.deltaTime, 0, 0);
 
-        if (transform.position.x < -1000)
+        if (transform.position.x < -400)
             transform.position = resetPos;
 	}
 
