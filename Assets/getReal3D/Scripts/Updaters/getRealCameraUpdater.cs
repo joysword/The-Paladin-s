@@ -50,7 +50,7 @@ public class getRealCameraUpdater
             nodeID = System.Convert.ToInt32(nodeIDString);
         }
 
-        if (nodeID > 16) {
+        if (nodeID > 18) {
             GetComponent<Camera>().gameObject.SetActive(false);
         }
 
@@ -69,7 +69,7 @@ public class getRealCameraUpdater
             CreateCameras();
         }
 
-        if (nodeID <= 16) {
+        if (nodeID <= 18) {
             Rect viewport = new Rect(0f, 0f, 1f, 1f);
 
             switch (viewportType) {
@@ -97,7 +97,7 @@ public class getRealCameraUpdater
     }
 
     void CreateCameras() {
-        if (nodeID <= 16) {
+        if (nodeID <= 18) {
             List<int> needCameras = new List<int>();
             for (int i = 1; i < getReal3D.Input.cameras.Count; ++i) needCameras.Add(i);
 
