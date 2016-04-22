@@ -1,15 +1,27 @@
 fileFormatVersion: 2
-guid: 7826d411721c31348b16558cf089b5f1
-timeCreated: 1461293135
+guid: 95f5f775381695a45911a73b9d7b8f04
+timeCreated: 1461292669
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: portal
+    100000: map_catacombs_future
+    100002: //RootNode
+    100004: map_support_future
+    100006: map_tomb_future
+    400000: map_catacombs_future
+    400002: //RootNode
+    400004: map_support_future
+    400006: map_tomb_future
+    2300000: map_catacombs_future
+    2300002: map_support_future
+    2300004: map_tomb_future
+    3300000: map_catacombs_future
+    3300002: map_support_future
+    3300004: map_tomb_future
+    4300000: map_catacombs_future
+    4300002: map_tomb_future
+    4300004: map_support_future
   materials:
     importMaterials: 1
     materialName: 0

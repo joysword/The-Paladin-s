@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 7826d411721c31348b16558cf089b5f1
-timeCreated: 1461293135
+guid: 79da4e2e86eee174d99762dd28efc296
+timeCreated: 1461295050
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: portal
+    4300000: train2
   materials:
     importMaterials: 1
     materialName: 0
