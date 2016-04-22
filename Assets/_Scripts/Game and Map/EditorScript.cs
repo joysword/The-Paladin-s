@@ -50,11 +50,14 @@ public class ObjectSetter : EditorWindow
     [MenuItem("Stuff/Add colliders to map")] //Add a menu item to the toolbar
     static void AddColliders()
     {
-        var map_past = GameObject.Find("map_past");
-        var map_future = GameObject.Find("map_future");
+        List<GameObject> obj = new List<GameObject>();
+        obj.Add(GameObject.Find("map_future"));
+        obj.Add(GameObject.Find("map_future_tomb"));
+        obj.Add(GameObject.Find("map_past"));
+        obj.Add(GameObject.Find("map_past_tomb"));
 
-        AddColliders(map_past.transform);
-        AddColliders(map_future.transform);
+        foreach (var o in obj)
+            AddColliders(o.transform);
     }
 
     static void AddColliders(Transform o)

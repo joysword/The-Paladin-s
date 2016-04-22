@@ -6,3 +6,6 @@ oak bark - https://losangelesloveaffair.files.wordpress.com/2012/05/dscn0436.jpg
 State Machine Scripts - http://unity3d.com/cn/learn/tutorials/modules/beginner/live-training-archive/state-machine-interface
 Outline Shader - http://answers.unity3d.com/questions/60155/is-there-a-shader-to-only-add-an-outline.html
 Vinque ffont - http://www.1001fonts.com/vinque-font.html
+gate texture -  http://www.idoorframe.com/wp-content/uploads/2015/03/old-wooden-castle-gate-with-pointed-top-model-and-using-metal-stud-for-the-door-reinforcement-54fff56694009.jpg
+lava - http://www.cltextures.com/texture-images/8/seamless-lava-misc-texture-image-5-1571.jpg
+board - http://www.vortexdesign.com/wp-content/uploads/wildtextures-wooden-chopping-board-texture-2-900x360.jpg
