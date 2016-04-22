@@ -24,6 +24,9 @@ public class LeverManager : InteractableBase {
     }
 
     public void OpenGate() {
+		AudioSource a = gameObject.GetComponent<AudioSource>();
+		//a.mute = false;
+		//a.Play();
 		gatePast.transform.Translate(0, 0, 14);
 		gateFuture.transform.Translate(0, 0, 14);
 		StartCoroutine("Close");
@@ -43,6 +46,9 @@ public class LeverManager : InteractableBase {
 			//this.gameObject.transform.Rotate (60,0,0);
 			//var handle = GameObject.Find("wooden_lever");
 			transform.Rotate(0, 180, 0);
+			AudioSource a = gameObject.GetComponent<AudioSource>();
+			//a.mute = false;
+			//a.Play();
 		}
 		isPulled = false;
 	}

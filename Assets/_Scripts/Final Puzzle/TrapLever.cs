@@ -6,6 +6,9 @@ public class TrapLever : InteractableBase {
 	public bool trapDown = false;
 
     override protected void Interact() {
+		AudioSource a = gameObject.GetComponent<AudioSource> ();
+		//a.mute = false;
+		//a.Play ();
         Debug.Log("hereerere");
         GameObject trap = GameObject.FindWithTag("TrapDoor1");
         Debug.Log(trap);
