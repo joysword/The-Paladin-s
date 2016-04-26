@@ -5,7 +5,7 @@ using UnityEngine;
 [CustomEditor(typeof(GameObject))]
 public class AddTree : Editor
 {
-    public bool Enable = true;
+    public bool Enable = false;
 
     public void OnSceneGUI()
     {
