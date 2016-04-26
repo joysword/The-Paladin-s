@@ -39,24 +39,24 @@ public class HighlightableBase : MonoBehaviour {
     private void TurnOnHalo() {
         Component halo = GetComponent("Halo");
         halo.GetType().GetProperty("enabled").SetValue(halo, true, null);
-        var materials = GetComponentsInChildren<Renderer>();
+        //var materials = GetComponentsInChildren<Renderer>();
         //var materials = GetComponentsInChildren<Renderer>().materials;
-        Debug.Log("Materail count: " + materials.Length);
-        foreach (var x in materials) {
-            Debug.Log("Material name: " + x);
-            x.material.SetColor("_Color", Color.red);
-        }
+        //Debug.Log("Materail count: " + materials.Length);
+        //foreach (var x in materials) {
+        //    Debug.Log("Material name: " + x);
+        //    x.material.SetColor("_Color", Color.red);
+        //}
     }
 
     protected void TurnOffHalo() {
         Component halo = GetComponent("Halo");
         halo.GetType().GetProperty("enabled").SetValue(halo, false, null);
-        var materials = GetComponentsInChildren<Renderer>();
+        //var materials = GetComponentsInChildren<Renderer>();
         //var materials = GetComponentsInChildren<Renderer>().materials;
-        Debug.Log("Materail count: " + materials.Length);
-        foreach (var x in materials) {
-            Debug.Log("Material name: " + x);
-            x.material.SetColor("_Color", Color.white);
-        }
+        //Debug.Log("Materail count: " + materials.Length);
+        //foreach (var x in materials) {
+        //    Debug.Log("Material name: " + x);
+        //   x.material.SetColor("_Color", Color.white);
+        //}
     }
 }
