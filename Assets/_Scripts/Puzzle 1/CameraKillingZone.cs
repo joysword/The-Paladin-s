@@ -4,6 +4,7 @@ using System.Collections;
 public class CameraKillingZone : KillingZoneBase {
 
     override public void OnTriggerEnter(Collider other) {
+        Debug.Log("Entered");
         if (other.CompareTag("Player")) {
             finishTextPast.GetComponent<TextMesh>().text = "The other player is detected by the spotlight. Try Again!";
             finishTextFuture.GetComponent<TextMesh>().text = "You are detected by the spotlight. Try Again!";

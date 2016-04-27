@@ -5,6 +5,7 @@ public class LeverManager : InteractableBase {
 
     public GameObject gatePast;
 	public GameObject gateFuture;
+    public GameObject logGate;
     public bool isPulled;
     
 	// Use this for initialization
@@ -30,6 +31,7 @@ public class LeverManager : InteractableBase {
 		gatePast.transform.Translate(0, 0, 14);
 		gateFuture.transform.Translate(0, 0, 14);
 		StartCoroutine("Close");
+        logGate.GetComponent<LoggateScript>().Open();
 	}
 
 	IEnumerator Close() {
