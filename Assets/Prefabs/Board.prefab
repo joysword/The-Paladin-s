@@ -11,9 +11,9 @@ GameObject:
   - 33: {fileID: 3308770}
   - 23: {fileID: 2350490}
   - 114: {fileID: 11454670}
-  - 65: {fileID: 6573454}
   - 122: {fileID: 12260854}
   - 82: {fileID: 8208980}
+  - 65: {fileID: 6543490}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -27,8 +27,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193198}
-  m_LocalRotation: {x: .474188149, y: -.474188626, z: -.524542987, w: -.524543107}
-  m_LocalPosition: {x: 0, y: -2.31997299, z: 25.480011}
+  m_LocalRotation: {x: .701851785, y: -.0860455781, z: .086045526, w: -.701852143}
+  m_LocalPosition: {x: -10.8300018, y: -.95998764, z: 25.9500122}
   m_LocalScale: {x: 60, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
@@ -67,7 +67,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193198}
   m_Mesh: {fileID: 4300000, guid: 10539dbca732bee4288ec1d4131d8a6b, type: 3}
---- !u!65 &6573454
+--- !u!65 &6543490
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -77,8 +77,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .0764811188, y: .0417611822, z: .0183213502}
-  m_Center: {x: .00852758531, y: .000657351979, z: .00872784853}
+  m_Size: {x: .0594136603, y: .0044556451, z: .00082927756}
+  m_Center: {x: 0, y: 0, z: -9.53674316e-07}
 --- !u!82 &8208980
 AudioSource:
   m_ObjectHideFlags: 1
