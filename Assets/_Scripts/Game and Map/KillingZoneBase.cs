@@ -12,6 +12,7 @@ abstract public class KillingZoneBase : MonoBehaviour {
     }
 
     virtual public void OnTriggerEnter(Collider other) {
+        Debug.Log("Killing base");
         if (other.CompareTag("Player")) {
             finishTextPast.GetComponent<TextMesh>().text = "You are dead!";
             finishTextFuture.GetComponent<TextMesh>().text = "You are dead!";
