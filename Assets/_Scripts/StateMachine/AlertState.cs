@@ -42,9 +42,9 @@ public class AlertState : IEnemyState {
     public void ToPatrolState() {
         enemy.currentState = enemy.patrolState;
         enemy.meshRendererFlag.material.color = Color.green;
-		anim.SetBool ("Alert",false);
-		anim.SetBool ("Walk",true);
-		anim.SetBool ("Run",false);
+		//anim.SetBool ("Alert",false);
+		//anim.SetBool ("Walk",true);
+		//anim.SetBool ("Run",false);
         chaseTimer = 0f;
         patrolTimer = 0f;
     }
@@ -65,7 +65,6 @@ public class AlertState : IEnemyState {
 
     private void Look() {
         RaycastHit hit;
-		Debug.Log ("RAYCASTING");
         if (Physics.Raycast(enemy.eyes.transform.position, enemy.eyes.transform.forward, out hit, enemy.sightRange) && hit.collider.CompareTag("Player")) {
             enemy.chaseTarget = hit.transform;
             enemy.sawPlayer = true;

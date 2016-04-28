@@ -34,9 +34,9 @@ public class PatrolState : IEnemyState {
     public void ToAlertState() {
         enemy.currentState = enemy.alertState;
         enemy.meshRendererFlag.material.color = Color.yellow;
-		anim.SetBool ("Alert",true);
-		anim.SetBool ("Walk",false);
-		anim.SetBool ("Run",false);
+		//anim.SetBool ("Alert",true);
+		//anim.SetBool ("Walk",false);
+		//anim.SetBool ("Run",false);
         Debug.Log("transitioning from Patrol to Alert");
     }
 
