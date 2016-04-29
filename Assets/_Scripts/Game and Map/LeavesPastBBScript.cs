@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class LeavesPastBBScript : MonoBehaviour
 {
     public string TargetCam = "RealCameraPast";
+    public Vector3 camPos;
 
     List<Transform> allLeaves;
 
@@ -34,10 +35,12 @@ public class LeavesPastBBScript : MonoBehaviour
         if (cam == null)
             return;
 
+        camPos = cam.transform.position;
+
         foreach (Transform c in allLeaves)
         {
             c.LookAt(c.transform.position + cam.transform.rotation * Vector3.back,
-                cam.transform.rotation * Vector3.up);
+            cam.transform.rotation * Vector3.up);
         }
     }
 }

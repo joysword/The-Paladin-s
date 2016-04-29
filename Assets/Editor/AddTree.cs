@@ -18,6 +18,7 @@ public class AddTree : Editor
         {
             Debug.Log("Tree copied");
             Event.current.Use();
+            
 
             Ray ray = HandleUtility.GUIPointToWorldRay(Event.current.mousePosition);
             RaycastHit hit = new RaycastHit();
@@ -25,13 +26,16 @@ public class AddTree : Editor
             {
                 var obj = GameObject.Instantiate(controller.GetComponent<AddTreeHook>().ObjectToClone);
                 var objt = obj.transform;
-                objt.position = hit.point + new Vector3(0, -0.5f, 0);
+                objt.position = hit.point + new Vector3(0, controller.GetComponent<AddTreeHook>().VertOffset, 0);
                 var rot = objt.eulerAngles;
                 rot.y = Random.value * 360;
                 objt.eulerAngles = rot;
                 objt.localScale = new Vector3(Random.value * 40 + 80, Random.value * 40 + 80, Random.value * 40 + 80);
                 obj.transform.parent = GameObject.Find("Flora").transform;
             }
+
+            Selection.activeGameObject = GameObject.Find("TreeAddController");
+            Selection.activeObject = GameObject.Find("TreeAddController");
         }
     }
 }
