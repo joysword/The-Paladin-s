@@ -3,12 +3,12 @@ using System.Collections;
 
 abstract public class KillingZoneBase : MonoBehaviour {
 
-    protected static GameObject finishTextPast;
-    protected static GameObject finishTextFuture;
+    public GameObject finishTextPast;
+    public GameObject finishTextFuture;
 
     void Start() {
-        finishTextPast = GameObject.FindWithTag("PlayerTextPast");
-        finishTextFuture = GameObject.FindWithTag("PlayerTextFuture");
+        //finishTextPast = GameObject.FindWithTag("PlayerTextPast");
+        //finishTextFuture = GameObject.FindWithTag("PlayerTextFuture");
     }
 
     virtual public void OnTriggerEnter(Collider other) {

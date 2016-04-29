@@ -15,6 +15,7 @@ public class deathChasm : KillingZoneBase
             finishTextFuture.SetActive(true);
             GameManager game = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
             game.Restart();
+            Debug.Log("hereer");
         }
     }
 }
