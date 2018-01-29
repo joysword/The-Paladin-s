@@ -1,3 +1,6 @@
+// this script implements the logic of Patrol state of our 3-state state machine AI
+// our NPC guard keeps patrolling in the dungeon and if he sees the player he'll enter Alert state
+
 using UnityEngine;
 using System.Collections;
 
